@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:focus {
+  outline-color: $colorLogo;
+  outline-offset: 3px;
+}
+::-moz-selection {
+  background: $colorLogo;
+  color: $colorHeaderMenuSelected;
+}
+::selection {
+  background: $colorLogo;
+  color: $colorHeaderMenuSelected;
+}
+html,
+body,
+button {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+body {
+  @extend %text-center;
+  background: $bodyBackgroundColor;
+  font: toEm($fontSizeBase,16)/1.3 $fontDefault;
+  color: $colorText;
+}
+div,
+img,
+video,
+object {
+  max-width: 100%;
+}
+input {
+  border: none;
+  border-radius: .5em;
+  padding: 4px 5px;
+}

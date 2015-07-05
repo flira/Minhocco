@@ -1,0 +1,66 @@
+@mixin all-states {
+  &:hover, &:focus, &.selected {
+    @content;
+  }
+}
+.sprt,
+[class|=icon],
+%sprites {
+  background: url("img/sprites.png") no-repeat 0 0;
+}
+/*
+  [3.5.1] Main menu hover states
+*/
+
+.main-menu-a {
+  @include all-states {
+    @extend %sprites;
+  }
+}
+.universo {
+  @include all-states {
+    background-position: 3px -37px;
+  }
+}
+.guardaroupa {
+  @include all-states {
+    background-position: 2px -69px;
+  }
+}
+.parque {
+  @include all-states {
+    background-position: -75px -37px;
+  }
+}
+.encontre {
+  @include all-states {
+    background-position: 2px -100px;
+  }
+}
+.lojinha {
+  @include all-states {
+    background-position: -108px -68px;
+  }
+}
+/*
+  [3.5.2] Icons sprites
+*/
+
+.search-submit {
+  background-position: 4px -137px;
+}
+.icon-minhocco {
+  background-position: -22px -140px
+}
+.icon-facebook {
+  background-position: -60px -140px;
+}
+.icon-pokeball {
+  background-position: -99px -139px;
+}
+.icon-pinterest {
+  background-position: -60px -179px;
+}
+.icon-youtube {
+  background-position: -99px -179px;
+}

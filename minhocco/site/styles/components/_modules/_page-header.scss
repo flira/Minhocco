@@ -1,0 +1,149 @@
+.body-header {
+  @extend %fixed;
+  background:$bodyBackgroundColor;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  .encap {
+    @extend %text-right;
+    div, form {
+      @extend %text-left;
+    }
+  }
+  .search {
+    @extend %inline-block;
+    margin-top: -2px;
+  }
+}
+.logo/*,
+.main-navigation-bar */ {
+  @extend %absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.logo {
+  @extend %hidden-text;
+  left: $externalMargin;
+  width: 118px;
+  height: 35px;
+}
+.main-navigation-bar {
+  @extend %inline-block;
+  padding: 23px;
+  max-width: 710px;
+  max-width: calc(100% - 110px);
+  //right: $externalMargin;
+  //height: toEm(20);
+  overflow: auto;
+}
+.search-field {
+  @extend %no-outline;
+}
+.search-submit {
+  @extend %float-left;
+}
+.main-menu {
+  @extend %inline-block;
+}
+.main-menu-label,
+.main-menu-ctrl {
+  @extend %no-display;
+}
+.main-menu-label {
+  font-weight: 700;
+  font-size: 1.25em;
+}
+.main-menu-a {
+  padding: 10px;
+  margin: -10px 2px 0;
+  color: $colorHeaderMenu;
+  &:hover, &:focus, &.selected {
+    @extend %bold;
+    color: $colorHeaderMenuSelected;
+    outline: none;
+  }
+}
+.search-field {
+  background: $light-gray;
+  color: $colorHeaderMenu;
+  width: 6.5em;
+  -webkit-transition: width ease-out .5s;
+          transition: width ease-out .5s;
+  &:focus {
+    width: 10em;
+  }
+}
+.search-submit {
+  background-color: transparent;
+  box-sizing: content-box;
+  border-radius: 100%;
+  margin-right: toEm(9);
+  margin-left: toEm(12);
+  width: toEm(20);
+  height: toEm(20);
+  padding: 1.5px;
+}
+@include medium {
+  .body-header .encap, .main-navigation-bar {
+    position: static;
+  }
+  .logo {
+    margin-top: 15px;
+  }
+  .main-navigation-bar {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 65px;
+  }
+  .main-menu {
+    width: calc(100% - 7em);
+  }
+  .body-header {
+    .search {
+      position: absolute;
+      right: $externalMargin;
+      bottom: 18px;
+    }
+  }
+  .search-field:focus {
+    width: 6.5em;
+  }
+}
+@include small {
+  .main-navigation-bar {
+    height: 0;
+    overflow: hidden;
+    padding-top: 45px;
+    -webkit-transition: height ease-out .5s;
+            transition: height ease-out .5s;
+  }
+  .main-menu-label {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 38%;
+  }
+  .main-menu-ctrl:checked ~ .main-navigation-bar{
+    height: 100%;
+  }
+  .main-menu-list {
+    display: block;
+    margin-top: 1.5em;
+    li {
+      margin: .5em 0;
+    }
+  }
+  .body-header .search {
+    margin-top: 1em;
+    position: static;
+    width: 100%;
+  }
+  .search-field {
+    &,
+    &:focus {
+      width: calc(100% - 60px);
+    }
+  }
+}

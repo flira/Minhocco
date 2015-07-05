@@ -1,0 +1,111 @@
+.fl-banner {
+  &-holder, &-list {
+    position: relative;
+  }
+  &-radio,
+  &-arrow-prev,
+  &-arrow-next {
+    position: absolute;
+  }
+  &-tc, &-img {
+    width: 100%;
+  } 
+  &-holder {
+    overflow: hidden;
+  }
+  &-list {
+    left: 0;
+    text-align: left;
+    transition: left ease-in-out .75s;
+    li {
+      display: block;
+      float: left;
+    }
+  }
+  &-arrow {
+    &-prev, &-next {
+      background: url("img/sprites.png") no-repeat;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      width: 30px;
+      height: 60px;
+    }
+    &-prev {
+      left: 18px;
+      background-position: 0 -219px;
+    }
+    &-next {
+      right: 18px;
+      background-position: -56px -219px;
+    }
+  }
+  &-radio {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    &-btn {
+      background: #fff;
+      border-radius: 1em;
+      display: block;
+      margin-left: 12px;
+      opacity: .4;
+      text-indent: -9999px;
+      width: 8px;
+      height: 8px;
+      transition: opacity ease-in-out .75s;
+      &:first-child {
+        margin-left: 0;
+      }
+      &.selected {
+        opacity: 1;
+      }
+    }
+    &-input {
+      display: none;
+    }
+  }
+}
+/*  hide banner before the script  */
+.ng-scope fl-banner ul,
+.fl-banner-tc ul {
+  height: 0;
+  overflow: hidden;
+}
+
+/*  Show banner if there is no js support or after the script */
+fl-banner ul,
+.fl-banner-tc .fl-banner-list {
+  height: auto;
+  overflow: visible;
+}
+
+/*
+________________________________________________________________________________
+
+  [X.1]Alternative Style 1
+*/
+
+.banner-masked {
+  .fl-banner-a {
+    display: block;
+    position: relative;
+  }
+  .fl-banner-tc {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .banner-mask {
+    background-size: contain;
+    background-blend-mode: multiply;
+    opacity: 1;
+    position: absolute;
+    transition: opacity ease-out .5s;
+    width: 100%;
+    height: calc(100% - 4px);
+  }
+  .selected .banner-mask {
+      opacity: 0;
+  }
+}

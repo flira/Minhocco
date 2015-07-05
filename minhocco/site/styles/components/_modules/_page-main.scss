@@ -1,0 +1,27 @@
+.body-main {
+  margin-top: 68px;
+}
+@include medium {
+    .body-main {
+        margin-top: toEm(100);
+    }
+}
+@include small {
+    .body-main {
+        margin-top: toEm(45);
+    }
+}
+
+body[class|=pg] .body-main {
+  margin-top: 93px;
+}
+@include medium {
+    body[class|=pg] .body-main {
+        margin-top: toEm(113);
+    }
+}
+@include small {
+    body[class|=pg] .body-main {
+        margin-top: toEm(58);
+    }
+}

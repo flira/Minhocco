@@ -1,0 +1,21 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Back-end developer: Cássio Couto
+  Location: Brasília, Brazil
+  
+  Front-end developer: Fernando Lira
+  Site: http://fernando.lira.etc.br
+  Location: Brasília, Brazil
+  
+  Web designer: Isadora Tupinambá
+  Site: http://isadoratupinamba.com
+  Location: Brasília, Brazil
+
+# TECHNOLOGY COLOPHON
+
+  Standards: HTML5, CSS3, ES5, PHP
+  Components: Angular JS, Google web-starter-kit, Gulp, Normalize.css, Sass, Wordpress
+  IDE: Cloud 9 @ c9.io

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-br" data-ng-app="minhocco">
+
+<head>
+  <meta charset="utf-8">
+  <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <![endif]-->
+  <meta name="description" content="Minhocco: roupas de brincar">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minhocco</title>
+  <style id="above-the-fold-css">
+    /* Paste here the above the fold styles */
+  </style>
+  <meta property="og:description" content="Em breve, site da Minhocco: roupas de brincar">
+  <meta property="og:url" content="http://www.minhocco.com.br">
+  <meta property="og:title" content="Minhocco">
+  <meta property="og:type" content="Minhocco:page">
+  <meta property="og:image" content="favicon.ico">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <!-- Add to homescreen -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Fallback to homescreen for Chrome <39 on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Minhocco">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Minhocco">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#F2049F">
+  <meta name="theme-color" content="#F2049F">
+
+  <!-- IE fixes -->
+  <!--[if lt IE 8]>
+    <script src="scripts/a.ielt8.js"></script>
+  <![endif]-->
+  <!--[if IE 8]>
+    <script src="scripts/a.ie8.js"></script>
+  <![endif]-->
+  <!--[if IE lte 8]>
+    <script type="text/javascript">window.IElt9 = true;</script>
+    <script src="scripts/IE9.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+  <![endif]-->
+  <!--[if IE lte 9]>
+    <script src="scripts/a.js"></script>
+    <script src="scripts/TweenLite.js"></script>
+  <![endif]-->
+  
+  <!-- Page styles -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class="pg-guardaroupa">
+  <header class="body-header">
+    <div class="encap">
+      <div class="logo-holder">
+        <a href="/" class="sprt logo">Início</a>
+      </div>
+      <input class="main-menu-ctrl" id="main-menu-ctrl" type="checkbox" value="visible" aria-hidden="true"/>
+      <div class="main-navigation-bar">
+        <label class="main-menu-label" for="main-menu-ctrl">Menu</label>
+        <nav class="main-menu">
+          <ul class="main-menu-list">
+            <li><a class="main-menu-a universo" id="main-menu-1" href="">universo</a>
+            </li>
+            <li><a class="main-menu-a guardaroupa selected" id="main-menu-2" href="">guarda-roupa</a>
+            </li>
+            <li><a class="main-menu-a parque" id="main-menu-3" href="">parque</a>
+            </li>
+            <li><a class="main-menu-a encontre" id="main-menu-4" href="">encontre a minhocco</a>
+            </li>
+            <li><a class="main-menu-a lojinha" id="main-menu-5" href="">lojinha</a>
+            </li>
+          </ul>
+        </nav>
+        <form class="search" id="search">
+          <input class="search-field" id="search-field" type="search" aria-label="busca"/>
+          <input class="sprt search-submit" type="submit" value="" aria-label="enviar busca" />
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main class="body-main" role="main">
+    <fl-banner class="banner-masked">
+      <ul>
+        <li>
+          <a href="#">
+            <div style="background-image:url(images/placeholders/Slideshow.jpg)" class="banner-mask"></div>
+            <img src="images/placeholders/Slideshow.jpg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#2">
+            <div style="background-image:url(images/placeholders/Slideshow.jpg)" class="banner-mask"></div>
+            <img src="images/placeholders/Slideshow.jpg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#2">
+            <div style="background-image:url(images/placeholders/Slideshow.jpg)" class="banner-mask"></div>
+            <img src="images/placeholders/Slideshow.jpg" alt="" />
+          </a>
+        </li>
+      </ul>
+    </fl-banner>
+  </main>
+
+  <footer class="body-footer">
+    <div class="encap">
+      <form id="newsletter" class="newsletter">
+        <h1>Fique atento às novidades!</h1>
+        <input class="newsletter-email" id="newsletter-email" placeholder="e-mail" />
+        <input class="newsletter-submit" type="submit" value="inscreva-se" />
+      </form>
+      <div class="site-map">
+        <nav>
+          <ul class="site-map-list">
+            <li class="site-map-lvl1">
+              <h1><a href="/" class="icon-minhocco" id="map-1" title="minhocco">início</a></h1>
+            </li>
+            <li class="site-map-lvl1">
+              <h1><a id="map-2" href="">universo minhocco</a></h1>
+              <ul>
+                <li class="site-map-lvl2"><a id="map-3" href="">a minhocco</a>
+                </li>
+                <li class="site-map-lvl2"><a id="map-4" href="">equipe</a>
+                </li>
+                <li class="site-map-lvl2"><a id="map-5" href="">turminha</a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-map-lvl1">
+              <h1><a id="map-6" href="">guarda-roupa</a></h1>
+            </li>
+            <li class="site-map-lvl1">
+              <h1><a id="map-7" href="">parque</a></h1>
+              <ul>
+                <li class="site-map-lvl2"><a id="map-8" href="">jogos</a>
+                </li>
+                <li class="site-map-lvl2"><a id="map-9" href="">estorinhas</a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-map-lvl1">
+              <h1><a id="map-10" href="">contato</a></h1>
+              <ul>
+                <li class="site-map-lvl2"><a id="map-11" href="">fale conosco</a>
+                </li>
+                <li class="site-map-lvl2"><a id="map-12" href="">trabalhe conosco</a>
+                </li>
+                <li class="site-map-lvl2"><a id="map-13" href="">lojas</a>
+                </li>
+                <li class="site-map-lvl2"><a id="map-14" href="">franquias</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="social-medias">
+        <nav>
+          <ul>
+            <li><a class="icon-facebook" title="facebook" href="">facebook</a>
+            </li>
+            <li><a class="icon-pokeball" title="instagram" href="">instagram</a>
+            </li>
+            <li><a class="icon-pinterest" title="pinterest" href="">pinterest</a>
+            </li>
+            <li><a class="icon-youtube" title="youtube" href="">youtube</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+
+  <script src="scripts/main.js"></script>
+  <!--<script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-62996854-1', 'auto');
+    ga('send', 'pageview');
+  </script>-->
+  <!-- Built with love using Google Toolkit -->
+</body>
+
+</html>
