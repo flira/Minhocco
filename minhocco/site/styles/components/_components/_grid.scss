@@ -65,7 +65,7 @@
 
 .block-line {
   @extend %text-justify;
-  margin: .7em 0;
+  margin: 0 0 .7em;
   .col {
     @extend %inline-block;
     margin: 0;

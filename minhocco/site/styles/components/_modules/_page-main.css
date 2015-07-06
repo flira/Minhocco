@@ -1,22 +1,21 @@
 /*
 Error: Undefined mixin 'medium'.
-        on line 5 of /home/ubuntu/workspace/minhocco/site/styles/components/_modules/_page-main.scss, in `medium'
-        from line 5 of /home/ubuntu/workspace/minhocco/site/styles/components/_modules/_page-main.scss
+        on line 4 of /home/ubuntu/workspace/minhocco/site/styles/components/_modules/_page-main.scss, in `medium'
+        from line 4 of /home/ubuntu/workspace/minhocco/site/styles/components/_modules/_page-main.scss
 
 1: .body-main {
-2:   margin-top: 68px;
+2:   margin-top: toEm(68);
 3: }
-4: 
-5: @include medium {
-6:   .body-main {
-7:     margin-top: toEm(100);
-8:   }
-9: }
-10: 
+4: @include medium {
+5:     .body-main {
+6:         margin-top: toEm(100);
+7:     }
+8: }
+9: @include small {
 
 Backtrace:
-/home/ubuntu/workspace/minhocco/site/styles/components/_modules/_page-main.scss:5:in `medium'
-/home/ubuntu/workspace/minhocco/site/styles/components/_modules/_page-main.scss:5
+/home/ubuntu/workspace/minhocco/site/styles/components/_modules/_page-main.scss:4:in `medium'
+/home/ubuntu/workspace/minhocco/site/styles/components/_modules/_page-main.scss:4
 /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
 /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
@@ -61,4 +60,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'medium'.\A         on line 5 of /home/ubuntu/workspace/minhocco/site/styles/components/_modules/_page-main.scss, in `medium'\A         from line 5 of /home/ubuntu/workspace/minhocco/site/styles/components/_modules/_page-main.scss\A \A 1: .body-main {\A 2:   margin-top: 68px;\A 3: }\A 4: \A 5: @include medium {\A 6:   .body-main {\A 7:     margin-top: toEm(100);\A 8:   }\A 9: }\A 10: "; }
+  content: "Error: Undefined mixin 'medium'.\A         on line 4 of /home/ubuntu/workspace/minhocco/site/styles/components/_modules/_page-main.scss, in `medium'\A         from line 4 of /home/ubuntu/workspace/minhocco/site/styles/components/_modules/_page-main.scss\A \A 1: .body-main {\A 2:   margin-top: toEm(68);\A 3: }\A 4: @include medium {\A 5:     .body-main {\A 6:         margin-top: toEm(100);\A 7:     }\A 8: }\A 9: @include small {"; }

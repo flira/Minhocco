@@ -60,6 +60,9 @@ fl-banner ul,
   height: auto;
   overflow: visible; }
 
+.fl-banner-holder {
+  margin-bottom: .7em; }
+
 /*
 ________________________________________________________________________________
 

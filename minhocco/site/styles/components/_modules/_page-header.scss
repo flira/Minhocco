@@ -55,9 +55,9 @@
   font-size: 1.25em;
 }
 .main-menu-a {
+  color: $colorHeaderMenu;
   padding: 10px;
   margin: -10px 2px 0;
-  color: $colorHeaderMenu;
   &:hover, &:focus, &.selected {
     @extend %bold;
     color: $colorHeaderMenuSelected;
@@ -83,6 +83,39 @@
   width: toEm(20);
   height: toEm(20);
   padding: 1.5px;
+}
+.sub-menu {
+  @extend %absolute;
+  background-color: $light-gray;
+  bottom: -2.6em;
+  padding: .2em 0;
+  width: 100%;
+}
+.encap.sub-menu-list {
+  text-align: left;
+}
+.sub-menu-a,
+.sub-menu-item::before {
+  color: $colorText;
+}
+.sub-menu-item {
+  &::before {
+    content: "•";
+    padding: 0 toEm(18);
+  }
+  &:first-child {
+    padding-left: 0;
+    &::before {
+      display: none;
+    }
+  }
+}
+.sub-menu-a {
+  font-size: toEm(12);
+  vertical-align: text-top;
+  &.selected, &:hover {
+    @extend %bold;
+  }
 }
 @include medium {
   .body-header .encap, .main-navigation-bar {

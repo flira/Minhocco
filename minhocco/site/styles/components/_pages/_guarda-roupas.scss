@@ -1,7 +1,6 @@
 .pg-guardaroupa {
-  @include pg-borders($colorGR);
-}
-.fl-banner-holder,
-.banner-mask {
-  background-color: $colorGR;
+  .fl-banner-holder,
+  .banner-mask {
+    background-color: $colorGR;
+  }
 }

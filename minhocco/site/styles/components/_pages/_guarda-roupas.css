@@ -1,24 +1,30 @@
 /*
-Error: Undefined mixin 'pg-borders'.
-        on line 2 of /home/ubuntu/workspace/minhocco/site/styles/components/_pages/_guarda-roupas.scss, in `pg-borders'
-        from line 2 of /home/ubuntu/workspace/minhocco/site/styles/components/_pages/_guarda-roupas.scss
+Error: Undefined variable: "$colorGR".
+        on line 4 of /home/ubuntu/workspace/minhocco/site/styles/components/_pages/_guarda-roupas.scss
 
 1: .pg-guardaroupa {
-2:   @include pg-borders($colorGR);
-3: }
-4: .fl-banner-holder,
-5: .banner-mask {
-6:   background-color: $colorGR;
-7: }
+2:   .fl-banner-holder,
+3:   .banner-mask {
+4:     background-color: $colorGR;
+5:   }
+6: }
 
 Backtrace:
-/home/ubuntu/workspace/minhocco/site/styles/components/_pages/_guarda-roupas.scss:2:in `pg-borders'
-/home/ubuntu/workspace/minhocco/site/styles/components/_pages/_guarda-roupas.scss:2
-/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
-/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
+/home/ubuntu/workspace/minhocco/site/styles/components/_pages/_guarda-roupas.scss:4
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
 /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
-/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:98:in `with_mixin'
-/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
 /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
 /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
@@ -69,4 +75,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'pg-borders'.\A         on line 2 of /home/ubuntu/workspace/minhocco/site/styles/components/_pages/_guarda-roupas.scss, in `pg-borders'\A         from line 2 of /home/ubuntu/workspace/minhocco/site/styles/components/_pages/_guarda-roupas.scss\A \A 1: .pg-guardaroupa {\A 2:   @include pg-borders($colorGR);\A 3: }\A 4: .fl-banner-holder,\A 5: .banner-mask {\A 6:   background-color: $colorGR;\A 7: }"; }
+  content: "Error: Undefined variable: \"$colorGR\".\A         on line 4 of /home/ubuntu/workspace/minhocco/site/styles/components/_pages/_guarda-roupas.scss\A \A 1: .pg-guardaroupa {\A 2:   .fl-banner-holder,\A 3:   .banner-mask {\A 4:     background-color: $colorGR;\A 5:   }\A 6: }"; }

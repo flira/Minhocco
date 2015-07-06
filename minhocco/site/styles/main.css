@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
   Above The Fold styles TOC:
 
@@ -394,7 +395,7 @@ h5,
 p {
   margin: 0; }
 
-.main-menu-a:hover, .main-menu-a:focus, .main-menu-a.selected, .body-footer h1, .newsletter .newsletter-submit {
+.main-menu-a:hover, .main-menu-a:focus, .main-menu-a.selected, .sub-menu-a.selected, .sub-menu-a:hover, .body-footer h1, .newsletter .newsletter-submit {
   font-weight: 700; }
 
 .small,
@@ -480,7 +481,7 @@ ________________________________________________________________________________
 .body-header {
   position: fixed; }
 
-.logo, .body-footer .icon-minhocco {
+.logo, .sub-menu, .body-footer .icon-minhocco {
   position: absolute; }
 
 .encap {
@@ -528,7 +529,7 @@ ________________________________________________________________________________
   [1.1.4]columns classes
 */
 .block-line {
-  margin: .7em 0; }
+  margin: 0 0 .7em; }
   .block-line .col {
     margin: 0;
     margin-left: 1em; }
@@ -593,9 +594,9 @@ ________________________________________________________________________________
   font-size: 1.25em; }
 
 .main-menu-a {
+  color: #000;
   padding: 10px;
-  margin: -10px 2px 0;
-  color: #000; }
+  margin: -10px 2px 0; }
   .main-menu-a:hover, .main-menu-a:focus, .main-menu-a.selected {
     color: #fff;
     outline: none; }
@@ -618,6 +619,31 @@ ________________________________________________________________________________
   width: 1.42857em;
   height: 1.42857em;
   padding: 1.5px; }
+
+.sub-menu {
+  background-color: #dcddde;
+  bottom: -2.6em;
+  padding: .2em 0;
+  width: 100%; }
+
+.encap.sub-menu-list {
+  text-align: left; }
+
+.sub-menu-a,
+.sub-menu-item::before {
+  color: #6d6e71; }
+
+.sub-menu-item::before {
+  content: "•";
+  padding: 0 1.28571em; }
+.sub-menu-item:first-child {
+  padding-left: 0; }
+  .sub-menu-item:first-child::before {
+    display: none; }
+
+.sub-menu-a {
+  font-size: 0.85714em;
+  vertical-align: text-top; }
 
 @media only screen and (max-width: 880px) {
   .body-header .encap, .main-navigation-bar {
@@ -678,7 +704,7 @@ ________________________________________________________________________________
   [2.2]Page-main
 */
 .body-main {
-  margin-top: 68px; }
+  margin-top: 4.85714em; }
 
 @media only screen and (max-width: 880px) {
   .body-main {
@@ -687,14 +713,24 @@ ________________________________________________________________________________
   .body-main {
     margin-top: 3.21429em; } }
 body[class|=pg] .body-main {
-  margin-top: 93px; }
+  padding-top: 15px; }
 
-@media only screen and (max-width: 880px) {
-  body[class|=pg] .body-main {
-    margin-top: 8.07143em; } }
-@media only screen and (max-width: 660px) {
-  body[class|=pg] .body-main {
-    margin-top: 4.14286em; } }
+body[class|=pg].pg-sub .body-main {
+  padding-top: 51px;
+  padding-top: calc(15px + 2.57143em); }
+
+.pg-universo .body-main,
+.pg-universo .body-header {
+  border-bottom: 13px solid #80c242; }
+.pg-universo .sub-menu-a.selected, .pg-universo .sub-menu-a:hover {
+  color: #80c242; }
+
+.pg-guardaroupa .body-main,
+.pg-guardaroupa .body-header {
+  border-bottom: 13px solid #792b84; }
+.pg-guardaroupa .sub-menu-a.selected, .pg-guardaroupa .sub-menu-a:hover {
+  color: #792b84; }
+
 /*
 ________________________________________________________________________________
 
@@ -930,6 +966,9 @@ fl-banner ul,
   height: auto;
   overflow: visible; }
 
+.fl-banner-holder {
+  margin-bottom: .7em; }
+
 /*
 ________________________________________________________________________________
 
@@ -959,21 +998,13 @@ ________________________________________________________________________________
   
   [5.1]Universo
 */
-.pg-universo .body-main,
-.pg-universo .body-header {
-  border-bottom: 13px solid #80c242; }
-
 /*
 ________________________________________________________________________________
 
   [5.2]Guarda Roupas
 */
-.pg-guardaroupa .body-main,
-.pg-guardaroupa .body-header {
-  border-bottom: 13px solid #792b84; }
-
-.fl-banner-holder,
-.banner-mask {
+.pg-guardaroupa .fl-banner-holder,
+.pg-guardaroupa .banner-mask {
   background-color: #792b84; }
 
 /*# sourceMappingURL=main.css.map */

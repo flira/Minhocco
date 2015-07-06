@@ -1,5 +1,5 @@
 .body-main {
-  margin-top: 68px;
+  margin-top: toEm(68);
 }
 @include medium {
     .body-main {
@@ -11,17 +11,24 @@
         margin-top: toEm(45);
     }
 }
-
 body[class|=pg] .body-main {
-  margin-top: 93px;
+  padding-top: 15px;
 }
-@include medium {
-    body[class|=pg] .body-main {
-        margin-top: toEm(113);
-    }
+
+body[class|=pg].pg-sub .body-main {
+  padding-top: 51px;
+  padding-top: calc(#{15px} + #{toEm(36)});
 }
-@include small {
-    body[class|=pg] .body-main {
-        margin-top: toEm(58);
+
+@each $pg-name, $pg-color in
+  (pg-universo, $colorUniverso),
+  (pg-guardaroupa, $colorGR) {
+  .#{$pg-name} {
+    @include pg-borders($pg-color);
+    .sub-menu-a {
+      &.selected, &:hover {
+        color: $pg-color;
+      }
     }
+  }
 }
