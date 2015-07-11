@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello Web - Processing.js Test</title>
+    
+    
+  </head>
+  <body>
+    <canvas id="pjs"> </canvas>
+    
+    <script src="processing.min.js"></script>
+    <script type="application/processing" data-processing-target="pjs">
+      //variaveis da Paleta
+      int coresPaleta = new int[35];
+      int classeCores = 7;
+      
+      int alturaCanvas = 800;
+      int larguraCanvas = 600;
+      
+      int corAncora = 0xffffffff;
+      int corStrokePaleta = 0xff000000;
+      
+      int paddingPaletaX = 20;
+      int paddingPaletaY = 20;
+      
+      int tamanhoElementoPaletaX = 25;
+      int tamanhoElementoPaletaY = 25;
+      
+      int indiceCorEscolhida = -1;
+      
+      //variaveis do desenho
+      PShape desenho;
+      int[] coresDesenho;
+      PShape[] filhos;
+      
+      void setup() {
+        size(larguraCanvas, alturaCanvas);
+        
+        background(corAncora);
+        stroke(corStrokePaleta);
+        
+        int intervaloCor[] =  new int[]{0x00070000, 0x00000700, 0x00000007, 0x00070700, 0x00070007, 0x00000707, 0x00070707};
+        
+        //construindo cores
+        for(int i = 0; i < coresPaleta.length; i++){
+          int modulo = i%classeCores;
+          int corGerada = corAncora - (i*intervaloCor[modulo]);
+          coresPaleta[i]  = corGerada;
+        }
+        //construindo a paleta
+        int indiceCor = 0;
+        for(int i = 0; i < coresPaleta.length/classeCores; i++){
+          for(int j = 0; j < classeCores; j++){
+            if(indiceCor > coresPaleta.length){break;}
+            fill(coresPaleta[indiceCor++]);
+            rect(paddingPaletaX + (j*tamanhoElementoPaletaX), 
+                 paddingPaletaY + (i*tamanhoElementoPaletaY), 
+                 tamanhoElementoPaletaX, 
+                 tamanhoElementoPaletaY
+            );
+          }
+        }
+        
+        //carregando o desenho
+        desenho = loadShape("bichinho_para_colorir.svg").getChild("Linhas").getChild(0);
+        filhos = new PShape[desenho.getChildCount()];
+        for(int i = 0; i < filhos.length; i++){
+          filhos[i] = desenho.getChild(i);
+          
+        }
+      }
+      
+      void draw(){
+        //recriando fundo
+        background(corAncora);
+        
+        //desenhando bichinho
+        if(indiceCorEscolhida >=0){
+        desenho.disableStyle();
+        strokeWeight(3)
+        stroke(corStrokePaleta);
+        fill(coresPaleta[indiceCorEscolhida]);
+        }
+        for(int i = 0; i < filhos.length; i++){
+          shape(filhos[i], 0, 0);
+        }
+        
+        //recriando paleta
+        stroke(corStrokePaleta);
+        strokeWeight(1);
+        strokeJoin(MITER);
+        int indiceCor = 0;
+        for(int i = 0; i < coresPaleta.length/classeCores; i++){
+          for(int j = 0; j < classeCores; j++){
+            if(indiceCor > coresPaleta.length){break;}
+            fill(coresPaleta[indiceCor++]);
+            rect(paddingPaletaX + (j*tamanhoElementoPaletaX), 
+                 paddingPaletaY + (i*tamanhoElementoPaletaY), 
+                 tamanhoElementoPaletaX, 
+                 tamanhoElementoPaletaY
+            );
+          }
+        }
+        
+      }
+      
+      void mouseClicked(){
+        if(mouseX < paddingPaletaX || mouseY < paddingPaletaY){
+          //ignora o clique
+          return;
+          
+        }else if(mouseX < (paddingPaletaX+(classeCores*tamanhoElementoPaletaX)) 
+                && 
+                mouseY < (paddingPaletaY + ((coresPaleta.length/classeCores)*tamanhoElementoPaletaY))){
+                  //tratamento paleta
+          int valorXReal = mouseX - paddingPaletaX;
+          int valorYReal = mouseY - paddingPaletaY;
+          int indiceX = floor(valorXReal/tamanhoElementoPaletaX);
+          int indiceY = floor(valorYReal/tamanhoElementoPaletaY);
+          indiceCorEscolhida = (indiceY*classeCores)+indiceX;
+          
+        }else{
+          //tratamento filhos
+        }
+      }
+    </script>
+ </body>
+</html>

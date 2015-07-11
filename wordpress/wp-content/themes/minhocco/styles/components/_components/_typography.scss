@@ -1,0 +1,67 @@
+/*
+  [0.2.1]Font imports
+*/
+@each $name, $weight, $style, $suffix in
+  ('asap', 300, normal, '-regular'),
+  ('asap', 300, italic, '-italic'),
+  ('asap', 700, normal, '-bold'),
+  ('asap', 700, italic, '-bolditalic'),
+  ('fingerpaint', 700, normal, '') {
+  @font-face {
+    @include font-face($name, $weight, $style, $suffix);
+  } 
+}
+
+%font2 {
+  @extend %bold;
+  font-family: $font2;
+}
+
+/*
+  [0.2.2]Font sizes, paddings and weights
+*/
+
+// Just normalizing text
+// Recommend using padding instead of margin
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+// Weights
+
+%bold {
+  font-weight: 700;
+}
+
+// Definitions
+.small,
+small {
+  font-size: .8em;
+}
+.base,
+p,
+ul,
+ol {
+  font-size: 1em;
+}
+
+/*
+  [0.2.3]Text aligns
+*/
+%text-center {
+  text-align: center;
+}
+%text-left {
+  text-align: left;
+}
+%text-right {
+  text-align: right;
+}
+%text-justify {
+  text-align: justify;
+}

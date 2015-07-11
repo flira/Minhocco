@@ -1,0 +1,47 @@
+.sprt,
+[class|=icon],
+.main-menu-a:hover,
+.main-menu-a:focus,
+.main-menu-a.selected {
+  background: url("img/sprites.png") no-repeat 0 0; }
+
+/*
+  [3.5.1] Main menu hover states
+*/
+.universo:hover, .universo:focus, .universo.selected {
+  background-position: 3px -37px; }
+
+.guardaroupa:hover, .guardaroupa:focus, .guardaroupa.selected {
+  background-position: 2px -69px; }
+
+.parque:hover, .parque:focus, .parque.selected {
+  background-position: -75px -37px; }
+
+.encontre:hover, .encontre:focus, .encontre.selected {
+  background-position: 2px -100px; }
+
+.lojinha:hover, .lojinha:focus, .lojinha.selected {
+  background-position: -108px -68px; }
+
+/*
+  [3.5.2] Icons sprites
+*/
+.search-submit {
+  background-position: 4px -137px; }
+
+.icon-minhocco {
+  background-position: -22px -140px; }
+
+.icon-facebook {
+  background-position: -60px -140px; }
+
+.icon-pokeball {
+  background-position: -99px -139px; }
+
+.icon-pinterest {
+  background-position: -60px -179px; }
+
+.icon-youtube {
+  background-position: -99px -179px; }
+
+/*# sourceMappingURL=_sprites.css.map */
