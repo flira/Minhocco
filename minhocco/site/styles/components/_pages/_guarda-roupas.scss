@@ -3,4 +3,7 @@
   .banner-mask {
     background-color: $colorGR;
   }
+  .body-main {
+    @extend %relative;
+  }
 }

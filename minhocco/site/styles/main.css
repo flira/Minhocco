@@ -31,6 +31,7 @@
   [4]Modules
     [4.1]Page footer
     [4.2]Banner
+    [4.3]Pop-up
   [5]Pages
 */
 /* -- Above The Fold styles -- */
@@ -411,7 +412,7 @@ ol {
 /*
   [0.2.3]Text aligns
 */
-body {
+body, .popup {
   text-align: center; }
 
 .encap, .body-header .encap div, .body-header .encap form, .body-footer .encap div, .body-footer .encap form {
@@ -481,10 +482,10 @@ ________________________________________________________________________________
 .body-header {
   position: fixed; }
 
-.logo, .sub-menu, .body-footer .icon-minhocco {
+.logo, .sub-menu, .body-footer .icon-minhocco, .popup {
   position: absolute; }
 
-.encap {
+.encap, .pg-guardaroupa .body-main {
   position: relative; }
 
 /*
@@ -522,7 +523,7 @@ ________________________________________________________________________________
   vertical-align: top; }
 
 .main-menu-label,
-.main-menu-ctrl {
+.main-menu-ctrl, .popup-ctrl {
   display: none; }
 
 /*
@@ -978,8 +979,8 @@ ________________________________________________________________________________
   display: block;
   position: relative; }
 .banner-masked .fl-banner-tc {
-  width: 80%;
-  margin-left: 10%; }
+  width: 50%;
+  margin-left: 25%; }
 .banner-masked .banner-mask {
   background-size: contain;
   background-blend-mode: multiply;
@@ -990,6 +991,26 @@ ________________________________________________________________________________
   height: calc(100% - 4px); }
 .banner-masked .selected .banner-mask {
   opacity: 0; }
+
+/*
+________________________________________________________________________________
+
+  [4.3]Pop-up
+*/
+.popup {
+  background: rgba(140, 199, 85, 0.8);
+  color: #fff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transition: all ease-in-out .5s; }
+
+.popup-ctrl:checked ~ .popup {
+  max-width: 33%;
+  max-height: 60%;
+  padding: 20px; }
 
 /*
 ________________________________________________________________________________
