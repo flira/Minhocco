@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Minhocco Universo
+ * Template Name: Minhocco Guarda Roupa
  *
  * @package WordPress
  * @subpackage Minhocco
@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<body <?php body_class("pg-universo"); ?>>
+<body <?php body_class("pg-guardaroupa"); ?>>
 <?php echo get_template_part("menu", "geral");?>
 <main class="body-main" role="main">
      

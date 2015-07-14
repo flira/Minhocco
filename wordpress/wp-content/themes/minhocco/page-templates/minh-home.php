@@ -10,8 +10,10 @@
 
 get_header(); ?>
 
+<body <?php body_class(); ?>>
+<?php echo get_template_part("menu", "geral");?>
 <main class="body-main" role="main">
-     
+
      <?php
     /*
     O Conteúdo dessa página são duas galerias. Vamos assim separá-las em duas partes.

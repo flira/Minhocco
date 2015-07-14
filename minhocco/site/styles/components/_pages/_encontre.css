@@ -1,0 +1,83 @@
+/*
+Error: Undefined variable: "$colorEncontre".
+        on line 8 of /home/ubuntu/workspace/minhocco/site/styles/components/_pages/_encontre.scss
+
+3:   .col {
+4:     color: white;
+5:     height: 120px;
+6:   }
+7:   .local {
+8:     background: $colorEncontre;
+9:     &.selected {
+10:       &, &:hover {
+11:         background: $colorGR;
+12:       }
+13:       .grid-onde-content {
+
+Backtrace:
+/home/ubuntu/workspace/minhocco/site/styles/components/_pages/_encontre.scss:8
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/plugin.rb:82:in `update_stylesheets'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:361:in `watch_or_update'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/bin/scss:13:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/bin/scss:23:in `load'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/bin/scss:23:in `<main>'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/bin/ruby_executable_hooks:15:in `eval'
+/usr/local/rvm/gems/ruby-2.1.5@rails4/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$colorEncontre\".\A         on line 8 of /home/ubuntu/workspace/minhocco/site/styles/components/_pages/_encontre.scss\A \A 3:   .col {\A 4:     color: white;\A 5:     height: 120px;\A 6:   }\A 7:   .local {\A 8:     background: $colorEncontre;\A 9:     &.selected {\A 10:       &, &:hover {\A 11:         background: $colorGR;\A 12:       }\A 13:       .grid-onde-content {"; }

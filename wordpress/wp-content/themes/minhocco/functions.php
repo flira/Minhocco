@@ -51,12 +51,21 @@ function minhocco_menu($menu_itens){
       </div></div>';
       return $html_conteudo;
 }
+
 // Custom filter function to modify default gallery shortcode output
 function minhocco_home_separa_galerias($html_conteudo){
 	//separa as divs das galerias usando regex
 	preg_match_all('/<div[^>]+>(.*?)<\/div>/s',$html_conteudo, $divs_galerias);
 	return $divs_galerias[0];
 }
+
+//menu util
+//se houver filhos dessa página, retorna o primeiro filho
+function minhocco_checar_se_ha_pai(){
+	global $post;
+	return $post->post_parent; 
+}
+
 
 //gallery util
 function minhocco_extrair_alts_e_srcs($div_galeria_1){
@@ -111,22 +120,77 @@ function minhocco_home_galeria_2($div_galeria_2){
 	//essa galeria só vai ter duas divs mesmo
 	//então só renderize o html como uma grande string
 	$html_conteudo = 
-	'<div class="block-line colx2">
-      <div class="col">
+	'<nav>
+      <ul class="block-line colx2">
+        <li class="col">
         <a href='.$alts[0].'>
           <img '.$srcs[0].' />
         </a>
-      </div><div class="col">
+       </li><li class="col">
         <a href='.$alts[1].'>
           <img '.$srcs[1].' />
-        </a>
-      </div>
-    </div>';
+         </li>
+      </ul>
+    </nav>';
   return $html_conteudo;
 }
 
-//wordpress stuff
+function minhocco_a_minhocco_galeria_1($div_galeria_1){
+	$alts_e_srcs = minhocco_extrair_alts_e_srcs($div_galeria_1);
+	
+	$alts = $alts_e_srcs[0];
+	$srcs = $alts_e_srcs[1];
+	
+	//criando o loop para retornar o html montado
+	$html_conteudo = 
+	 '<fl-banner>
+    <ul>';
+    for($i = 0; $i < count($srcs); $i++){
+        $html_conteudo = $html_conteudo.'<li>
+        <a href='.$alts[$i].'><img '.$srcs[$i].' /></a>
+        </li>';
+    }
+    $html_conteudo = $html_conteudo.'</ul>
+  </fl-banner>';
+  return $html_conteudo;
+}
+
+function minhocco_universo_galeria_1($div_galeria_1){
+	$alts_e_srcs = minhocco_extrair_alts_e_srcs($div_galeria_1);
+	
+	$alts = $alts_e_srcs[0];
+	$srcs = $alts_e_srcs[1];
+	
+	//criando o loop para retornar o html montado
+	$html_conteudo = 
+	 '<nav>
+      <ul class="block-line colx3">';
+    for($i = 0; $i < count($srcs); $i++){
+        $html_conteudo = $html_conteudo.'<li class="col">
+        <a href='.$alts[$i].'><img '.$srcs[$i].' /></a>
+        </li>';
+    }
+    $html_conteudo = $html_conteudo.'</ul>
+    </nav>';
+  return $html_conteudo;
+}
+
 function register_my_menu() {
-  register_nav_menu('header-menu',__( 'Header Menu' ));
+  register_nav_menu('menu-nivel-1',__( 'Menu Nivel 1' ));
+  register_nav_menu('menu-nivel-2',__( 'Menu Nivel 2' ));
 }
 add_action( 'init', 'register_my_menu' );
+
+function minhocco_submenu($page_id) { 
+	global $post;
+	$children = get_pages('child_of='.$page_id.'&parent='.$page_id);
+	$html_conteudo = '<nav class="sub-menu">
+      <ul class="sub-menu-list encap">';
+	for($i = 0; $i < count($children[0]); $i++){
+		$html_conteudo = $html_conteudo.'<li class="sub-menu-item"><a class="sub-menu-a" href="'.$children[0]->guid.'">'.$children[0]->post_title.'</a></li>';
+	}
+	$html_conteudo = $html_conteudo."</ul>
+    </nav>";
+	return $html_conteudo;
+	
+}

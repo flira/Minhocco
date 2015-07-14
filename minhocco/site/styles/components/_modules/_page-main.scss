@@ -22,7 +22,8 @@ body[class|=pg].pg-sub .body-main {
 
 @each $pg-name, $pg-color in
   (pg-universo, $colorUniverso),
-  (pg-guardaroupa, $colorGR) {
+  (pg-guardaroupa, $colorGR),
+  (pg-encontre, $colorEncontre) {
   .#{$pg-name} {
     @include pg-borders($pg-color);
     .sub-menu-a {

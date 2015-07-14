@@ -1,0 +1,68 @@
+.grid-onde {
+  padding: 0 1em;
+  .col {
+    color: white;
+    height: 120px;
+  }
+  .local {
+    background: $colorEncontre;
+    &.selected {
+      &, &:hover {
+        background: $colorGR;
+      }
+      .grid-onde-content {
+        background-color: rgba(121, 43, 130, .9);
+        display: block;
+        padding: 33px;
+        position: absolute;
+        top: 239px;
+        left: 0;
+        width: 100%;
+        height: 261px;
+        height: calc(240px + 1.5em);
+      }
+    }
+    &:hover {
+      background: lighten($colorGR, 20%);
+    }
+    h1 {
+      cursor: pointer;
+      font-family: 'fingerpaint', sans-serif;
+      font-size: toEm(16);
+      padding: 50px;
+      padding: calc(60px - .65em);
+      text-align: center;
+    }
+    h2 {
+      font-weight: 700;
+      padding-bottom: 1em;
+    }
+    address {
+      font-size: (12/14)+em;
+    }
+    .fechar {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      width: 22px;
+      height: 23px;
+    }
+  }
+  .block-line {
+      &:nth-child(2) .grid-onde-content {
+        top: 369px;
+      }
+      &:nth-child(3) .grid-onde-content {
+        top: 118px;
+      }
+      &:nth-child(3) .grid-onde-content {
+        top: 247px;
+      }
+    }
+  .placeholder {
+    background: lighten($colorEncontre, 20%);
+  }
+  &-content {
+    display: none;
+  }
+}

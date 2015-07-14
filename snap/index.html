@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo</title>
+    <script src="js/snap.svg-min.js"></script>
+    
+</head>
+<body>
+    <svg id="svg" width="1000" height="1000">
+    </svg>
+    
+    <script>
+    
+      var a = Snap("#svg");
+      
+      Snap.load("bichinho_para_colorir.svg", function (f) {
+                var preenchimento = f.select("#Preenchimento");
+                var linhas = f.select("#Linhas");
+                preenchimento.appendTo(a);
+                linhas.appendTo(a);
+                var paths = preenchimento.selectAll("path");
+                for(a = 1; a < paths.length; a++){
+                  paths[a].click(function(){
+                    this.attr({fill: "#fc0"});
+                  });
+                }
+            });
+    
+    </script>
+</body>
+</html>

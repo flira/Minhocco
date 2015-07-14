@@ -9,6 +9,7 @@
  * @since Minhocco 1.0
  */
 ?>
+
 <!doctype html>
 <html lang="pt-br" data-ng-app="minhocco">
 
@@ -69,51 +70,3 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/styles/main.css">
   <?php wp_head(); ?>
 </head>
-
-<body <?php body_class(); ?>>
-	<header class="body-header">
-<?php 
-  
-  $args = array(
-        'order'                  => 'ASC',
-        'orderby'                => 'menu_order',
-        'post_type'              => 'nav_menu_item',
-        'post_status'            => 'publish',
-        'output'                 => ARRAY_A,
-        'output_key'             => 'menu_order',
-        'nopaging'               => true,
-        'update_post_term_cache' => false );
-  $menu = 'Principal';
-  $items = wp_get_nav_menu_items( $menu, $args );
-  echo(minhocco_menu($items));
-  ?>
-    <!--<div class="encap">
-      <div class="logo-holder">
-        <a href="/" class="sprt logo">Início</a>
-      </div>
-      <input class="main-menu-ctrl" id="main-menu-ctrl" type="checkbox" value="visible" aria-hidden="true"/>
-      <div class="main-navigation-bar">
-        <label class="main-menu-label" for="main-menu-ctrl">Menu</label>
-        <nav class="main-menu">
-          <ul class="main-menu-list">
-            <li><a class="main-menu-a universo"  href="">universo</a>
-            </li>
-            <li><a class="main-menu-a guardaroupa"  href="">guarda-roupa</a>
-            </li>
-            <li><a class="main-menu-a parque"  href="">parque</a>
-            </li>
-            <li><a class="main-menu-a encontre"  href="">encontre a minhocco</a>
-            </li>
-            <li><a class="main-menu-a lojinha"  href="">lojinha</a>
-            </li>
-          </ul>
-        </nav>
-        <form class="search" id="search">
-          <input class="search-field" id="search-field" type="search" aria-label="busca"/>
-          <input class="sprt search-submit" type="submit" value="" aria-label="enviar busca" />
-        </form>
-      </div>
-    </div>-->
-  </header>
-  
-  
