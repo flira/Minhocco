@@ -1039,6 +1039,14 @@ ________________________________________________________________________________
 
   [5.4]Guarda Roupas
 */
+.address .panel-left,
+.address .panel-right {
+  display: inline-block;
+  width: 50%; }
+.address .address-map {
+  width: 100%;
+  height: 334px; }
+
 .grid-onde {
   padding: 0 1em; }
   .grid-onde .col {
@@ -1058,12 +1066,6 @@ ________________________________________________________________________________
       width: 100%;
       height: 261px;
       height: calc(240px + 1.5em); }
-    .grid-onde .local.selected:nth-child(2) {
-      top: 369px; }
-    .grid-onde .local.selected:nth-child(3) {
-      top: 118px; }
-    .grid-onde .local.selected:nth-child(3) {
-      top: 247px; }
     .grid-onde .local:hover {
       background: #b74fc6; }
     .grid-onde .local h1 {
@@ -1084,6 +1086,12 @@ ________________________________________________________________________________
       right: 1em;
       width: 22px;
       height: 23px; }
+  .grid-onde .block-line:nth-child(2) .grid-onde-content {
+    top: 369px; }
+  .grid-onde .block-line:nth-child(3) .grid-onde-content {
+    top: 118px; }
+  .grid-onde .block-line:nth-child(3) .grid-onde-content {
+    top: 247px; }
   .grid-onde .placeholder {
     background: #62dfe0; }
   .grid-onde-content {

@@ -1,3 +1,15 @@
+.address {
+  .panel-left,
+  .panel-right {
+    display: inline-block;
+    width: 50%;
+  }
+  .address-map {
+    width: 100%;
+    height: 334px;
+  }
+}
+
 .grid-onde {
   padding: 0 1em;
   .col {

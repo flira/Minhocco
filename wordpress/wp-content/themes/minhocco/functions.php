@@ -59,6 +59,19 @@ function minhocco_home_separa_galerias($html_conteudo){
 	return $divs_galerias[0];
 }
 
+function minhocco_guarda_roupa_separa_galerias($html_conteudo){
+	//separa as divs das galerias usando regex
+	
+	preg_match_all('/<div[^>]+>(.*?)<\/div>/s',$html_conteudo, $divs_galerias);
+	
+	preg_match_all('/<hr \/>(.*)/s',$html_conteudo, $popup);
+	
+	preg_match_all('/<h1[^>]+>(.*?)<\/h1>(.*)/s', $popup[0][0], $popup_conteudo);
+	var_dump($popup_conteudo[0][0]);
+	return $divs_galerias[0];
+	
+}
+
 //menu util
 //se houver filhos dessa página, retorna o primeiro filho
 function minhocco_checar_se_ha_pai(){
