@@ -1,6 +1,6 @@
 .body-header {
   @extend %fixed;
-  background:$bodyBackgroundColor;
+  background:$mainBgColor;
   top: 0;
   width: 100%;
   z-index: 99;
@@ -100,7 +100,7 @@
 }
 .sub-menu-item {
   &::before {
-    content: "•";
+    content: " ";
     padding: 0 toEm(18);
   }
   &:first-child {

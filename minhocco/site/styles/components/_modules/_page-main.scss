@@ -1,4 +1,5 @@
 .body-main {
+  background-color: $mainBgColor;
   margin-top: toEm(68);
 }
 @include medium {
