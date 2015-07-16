@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$colorEncontre".
-        on line 20 of /home/ubuntu/workspace/minhocco/site/styles/components/_pages/_encontre.scss
+        on line 40 of /home/ubuntu/workspace/minhocco/site/styles/components/_pages/_encontre.scss
 
-15:   .col {
-16:     color: white;
-17:     height: 120px;
-18:   }
-19:   .local {
-20:     background: $colorEncontre;
-21:     &.selected {
-22:       &, &:hover {
-23:         background: $colorGR;
-24:       }
-25:       .grid-onde-content {
+35:     width: 50%;
+36:     height: 334px;
+37:   }
+38:   .panel-left {
+39:     @extend %panels-padding;
+40:     background: $colorEncontre;
+41:   }
+42:   .address-map {
+43:     width: 100%;
+44:     height: 334px;
+45:   }
 
 Backtrace:
-/home/ubuntu/workspace/minhocco/site/styles/components/_pages/_encontre.scss:20
+/home/ubuntu/workspace/minhocco/site/styles/components/_pages/_encontre.scss:40
 /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
 /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
 /usr/local/rvm/gems/ruby-2.1.5@rails4/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
@@ -80,4 +80,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$colorEncontre\".\A         on line 20 of /home/ubuntu/workspace/minhocco/site/styles/components/_pages/_encontre.scss\A \A 15:   .col {\A 16:     color: white;\A 17:     height: 120px;\A 18:   }\A 19:   .local {\A 20:     background: $colorEncontre;\A 21:     &.selected {\A 22:       &, &:hover {\A 23:         background: $colorGR;\A 24:       }\A 25:       .grid-onde-content {"; }
+  content: "Error: Undefined variable: \"$colorEncontre\".\A         on line 40 of /home/ubuntu/workspace/minhocco/site/styles/components/_pages/_encontre.scss\A \A 35:     width: 50%;\A 36:     height: 334px;\A 37:   }\A 38:   .panel-left {\A 39:     @extend %panels-padding;\A 40:     background: $colorEncontre;\A 41:   }\A 42:   .address-map {\A 43:     width: 100%;\A 44:     height: 334px;\A 45:   }"; }

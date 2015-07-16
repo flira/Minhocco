@@ -61,14 +61,15 @@ function minhocco_home_separa_galerias($html_conteudo){
 
 function minhocco_guarda_roupa_separa_galerias($html_conteudo){
 	//separa as divs das galerias usando regex
-	
+	$array_geral = array();
 	preg_match_all('/<div[^>]+>(.*?)<\/div>/s',$html_conteudo, $divs_galerias);
 	
 	preg_match_all('/<hr \/>(.*)/s',$html_conteudo, $popup);
-	
-	preg_match_all('/<h1[^>]+>(.*?)<\/h1>(.*)/s', $popup[0][0], $popup_conteudo);
-	var_dump($popup_conteudo[0][0]);
-	return $divs_galerias[0];
+	array_push($array_geral, $divs_galerias[0][0]);
+	preg_match_all('/<h[^>]+>(.*?)<\/h[^>]>(.*)/s', $popup[1][0], $popup_conteudo);
+	array_push($array_geral, $popup_conteudo[1][0]);
+	array_push($array_geral, $popup_conteudo[2][0]);
+	return $array_geral;
 	
 }
 
@@ -84,7 +85,7 @@ function minhocco_checar_se_ha_pai(){
 function minhocco_extrair_alts_e_srcs($div_galeria_1){
 	//extraindo imagens
 	preg_match_all('/<img[^>]+>/i',$div_galeria_1, $images0); 
-	
+
 	//extraindo os srcs
 	$srcs = array();
 	for($i = 0; $i < count($images0[0]); $i++){
@@ -168,6 +169,43 @@ function minhocco_a_minhocco_galeria_1($div_galeria_1){
   return $html_conteudo;
 }
 
+
+function minhocco_guarda_roupa_galeria_1($div_galeria_1){
+	
+	$alts_e_srcs = minhocco_extrair_alts_e_srcs($div_galeria_1);
+	
+	$alts = $alts_e_srcs[0];
+	$srcs = $alts_e_srcs[1];
+	
+	//criando o loop para retornar o html montado
+	$html_conteudo = 
+	 '<fl-banner class="banner-masked">
+    <ul>';
+    for($i = 0; $i < count($srcs); $i++){
+        $html_conteudo = $html_conteudo.'<li>
+        <a href='.$alts[$i].'>
+        <div class="banner-mask" style="background-image:url('.$srcs[$i].')"></div>
+        <img '.$srcs[$i].' /></a>
+        </li>';
+    }
+    $html_conteudo = $html_conteudo.'</ul>
+  </fl-banner>';
+  return $html_conteudo;
+}
+
+function minhocco_guarda_roupa_popup_1($titulo, $texto){
+	$html_conteudo = '<div class="popup-encap">
+      <input class="popup-ctrl" id="popup-ctrl" type="checkbox" aria-hidden="true" checked/>
+      <label class="popup-sprt" for="popup-ctrl" aria-hidden="true"></label>
+      <div class="popup">
+        <h1>'.$titulo.'</span></h1>
+        <p>'.$texto.'</p>
+      </div>
+    </div>';
+    return $html_conteudo;
+  
+}
+
 function minhocco_universo_galeria_1($div_galeria_1){
 	$alts_e_srcs = minhocco_extrair_alts_e_srcs($div_galeria_1);
 	
@@ -191,6 +229,7 @@ function minhocco_universo_galeria_1($div_galeria_1){
 function register_my_menu() {
   register_nav_menu('menu-nivel-1',__( 'Menu Nivel 1' ));
   register_nav_menu('menu-nivel-2',__( 'Menu Nivel 2' ));
+  register_nav_menu('menu-nivel-3',__( 'Menu Nivel 3' ));
 }
 add_action( 'init', 'register_my_menu' );
 

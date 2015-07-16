@@ -23,16 +23,18 @@ get_header();
           //recuperando o código em html:
           $html = do_shortcode(get_the_content());
           //separando as divs da galeria:
-          $divs_galerias = minhocco_guarda_roupa_separa_galerias($html);
-          //var_dump($divs_galerias);
+          $divs = minhocco_guarda_roupa_separa_galerias($html);
          //formatando imagens de cada galeria
          //usando as funções que eu defini no function.php
-          //$html_galeria_1 = minhocco_universo_galeria_1($divs_galerias[0]);
+          $html_galeria_1 = minhocco_guarda_roupa_galeria_1($divs[0]);
+          $html_popup_1 = minhocco_guarda_roupa_popup_1($divs[1], $divs[2]);
         endwhile; else: ?>
           
      <?php endif; ?>
      
-    <?php echo $html_galeria_1; ?>
+    <?php echo $html_galeria_1; 
+          echo $html_popup_1;
+    ?>
 </main>
 
 <?php

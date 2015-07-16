@@ -534,7 +534,7 @@ ________________________________________________________________________________
   .block-line .col {
     margin: 0;
     margin-left: 1em; }
-  .block-line.col-1 .col,
+  .block-line.colx1 .col,
   .block-line .col img {
     width: 100%; }
   .block-line .col:first-child, .block-line.col-1 .col {
@@ -1039,18 +1039,86 @@ ________________________________________________________________________________
 
   [5.4]Guarda Roupas
 */
-.address .panel-left,
-.address .panel-right {
+.pg-encontre .body-main h1, .form-encap .contato-enviar, .form-encap .mensagem {
+  font-family: 'fingerpaint', sans-serif; }
+
+.pg-encontre .body-main {
+  color: white; }
+  .pg-encontre .body-main h1 {
+    font-size: 1.14286em;
+    padding: 0 0 1em; }
+  .pg-encontre .body-main h2 {
+    font-weight: 700;
+    padding-bottom: 1em; }
+
+.address .panel-left, .form-encap {
+  padding: 31px 63px; }
+
+.address h1, .address h2, .form-encap h1, .form-encap h2 {
+  font-size: 1.42857em;
+  text-transform: lowercase; }
+
+.address address {
+  padding-bottom: 2em; }
+.address .panel-left, .address .panel-right {
   display: inline-block;
-  width: 50%; }
+  vertical-align: top;
+  text-align: left;
+  width: 50%;
+  height: 334px; }
+.address .panel-left {
+  background: #24b7b8; }
 .address .address-map {
   width: 100%;
   height: 334px; }
 
+.form-encap {
+  background: #792b84;
+  position: relative;
+  text-align: left; }
+  .form-encap label {
+    font-size: 1.14286em;
+    width: 100%; }
+  .form-encap input,
+  .form-encap select,
+  .form-encap textarea {
+    background: #24b7b8;
+    border: none;
+    border-radius: 0;
+    padding: .5em 1em;
+    resize: none;
+    width: 100%; }
+    .form-encap input:focus,
+    .form-encap select:focus,
+    .form-encap textarea:focus {
+      outline: none; }
+  .form-encap option,
+  .form-encap .contato-enviar {
+    background: #1f9999; }
+  .form-encap .contato-form {
+    position: relative;
+    width: 420px; }
+  .form-encap .contato-enviar {
+    font-size: 1.42857em;
+    position: absolute;
+    right: -8em;
+    bottom: .4em;
+    padding: 21px 12px;
+    width: initial; }
+  .form-encap .mensagem {
+    font-size: 16px;
+    position: absolute;
+    top: 49px;
+    right: 221px;
+    text-align: center;
+    width: 200px;
+    height: 64px; }
+    .form-encap .mensagem a {
+      color: #fff; }
+
 .grid-onde {
   padding: 0 1em; }
   .grid-onde .col {
-    color: white;
     height: 120px; }
   .grid-onde .local {
     background: #24b7b8; }
@@ -1066,18 +1134,13 @@ ________________________________________________________________________________
       width: 100%;
       height: 261px;
       height: calc(240px + 1.5em); }
-    .grid-onde .local:hover {
-      background: #b74fc6; }
-    .grid-onde .local h1 {
+    .grid-onde .local.selected h1 {
       cursor: pointer;
-      font-family: 'fingerpaint', sans-serif;
-      font-size: 1.14286em;
       padding: 50px;
       padding: calc(60px - .65em);
       text-align: center; }
-    .grid-onde .local h2 {
-      font-weight: 700;
-      padding-bottom: 1em; }
+    .grid-onde .local:hover {
+      background: #b74fc6; }
     .grid-onde .local address {
       font-size: 0.85714em; }
     .grid-onde .local .fechar {
