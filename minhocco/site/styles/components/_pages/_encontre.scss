@@ -60,7 +60,7 @@
 }
 .form-encap {
   @extend %panels-padding;
-  background: $colorGR;
+  background: url(img/rapport-contato.png) $colorGR;
   position: relative;
   text-align: left;
   label {
@@ -70,7 +70,6 @@
   input,
   select,
   textarea, {
-    -moz-appearance: none;
     -webkit-appearance: none;
     background: $colorEncontre;
     border: none;

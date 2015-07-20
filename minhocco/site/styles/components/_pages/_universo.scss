@@ -58,4 +58,19 @@
   .mascote-rd-jacare:checked  ~ .mascote-selected {
     background-image: url(../universo/images/Jacare.png);
   }
+  .mascote-rd-arara:checked  ~ .mascote-selected {
+    background-image: url(../universo/images/Arara.png);
+  }
+  .mascote-rd-onca:checked  ~ .mascote-selected {
+    background-image: url(../universo/images/Onca.png);
+  }
+  .mascote-rd-preguica:checked  ~ .mascote-selected {
+    background-image: url(../universo/images/Preguica.png);
+  }
+  .mascote-rd-lobo:checked  ~ .mascote-selected {
+    background-image: url(../universo/images/Lobo-guara.png);
+  }
+  .mascote-rd-tamandua:checked  ~ .mascote-selected {
+    background-image: url(../universo/images/Tamandua.png);
+  }
 }

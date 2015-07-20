@@ -1079,6 +1079,16 @@ ________________________________________________________________________________
     left: 38%; }
   .mascotes .mascote-rd-jacare:checked ~ .mascote-selected {
     background-image: url(../universo/images/Jacare.png); }
+  .mascotes .mascote-rd-arara:checked ~ .mascote-selected {
+    background-image: url(../universo/images/Arara.png); }
+  .mascotes .mascote-rd-onca:checked ~ .mascote-selected {
+    background-image: url(../universo/images/Onca.png); }
+  .mascotes .mascote-rd-preguica:checked ~ .mascote-selected {
+    background-image: url(../universo/images/Preguica.png); }
+  .mascotes .mascote-rd-lobo:checked ~ .mascote-selected {
+    background-image: url(../universo/images/Lobo-guara.png); }
+  .mascotes .mascote-rd-tamandua:checked ~ .mascote-selected {
+    background-image: url(../universo/images/Tamandua.png); }
 
 /*
 ________________________________________________________________________________
@@ -1140,7 +1150,7 @@ ________________________________________________________________________________
   height: 189px; }
 
 .form-encap {
-  background: #792b84;
+  background: url(img/rapport-contato.png) #792b84;
   position: relative;
   text-align: left; }
   .form-encap label {
@@ -1149,7 +1159,6 @@ ________________________________________________________________________________
   .form-encap input,
   .form-encap select,
   .form-encap textarea {
-    -moz-appearance: none;
     -webkit-appearance: none;
     background: #24b7b8;
     border: none;
