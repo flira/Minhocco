@@ -70,6 +70,8 @@
   input,
   select,
   textarea, {
+    -moz-appearance: none;
+    -webkit-appearance: none;
     background: $colorEncontre;
     border: none;
     border-radius: 0;
@@ -125,6 +127,12 @@
   }
   .local {
     background: $colorEncontre;
+    h1 {
+      cursor: pointer;
+      padding: 50px;
+      padding: calc(60px - .65em);
+      text-align: center;
+    }
     &.selected {
       &, &:hover {
         background: $colorGR;
@@ -140,12 +148,6 @@
         height: 261px;
         height: calc(240px + 1.5em);
       }
-       h1 {
-        cursor: pointer;
-        padding: 50px;
-        padding: calc(60px - .65em);
-        text-align: center;
-       }
     }
     &:hover {
       background: lighten($colorGR, 20%);
@@ -168,7 +170,7 @@
       &:nth-child(3) .grid-onde-content {
         top: 118px;
       }
-      &:nth-child(3) .grid-onde-content {
+      &:nth-child(4) .grid-onde-content {
         top: 247px;
       }
     }

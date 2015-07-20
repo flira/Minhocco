@@ -12,11 +12,11 @@
         margin-top: toEm(45);
     }
 }
-body[class|=pg] .body-main {
+body[class*=pg] .body-main {
   padding-top: 15px;
 }
 
-body[class|=pg].pg-sub .body-main {
+body[class*=pg].pg-sub .body-main {
   padding-top: 51px;
   padding-top: calc(#{15px} + #{toEm(36)});
 }
@@ -24,6 +24,7 @@ body[class|=pg].pg-sub .body-main {
 @each $pg-name, $pg-color in
   (pg-universo, $colorUniverso),
   (pg-guardaroupa, $colorGR),
+  (pg-parque, $colorParque),
   (pg-encontre, $colorEncontre) {
   .#{$pg-name} {
     @include pg-borders($pg-color);

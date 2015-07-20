@@ -1,3 +1,50 @@
-
+.mascotes {
+  position: relative;
+  width: 100%; }
+  .mascotes input {
+    display: none; }
+  .mascotes label, .mascotes li {
+    display: block;
+    z-index: 9999; }
+  .mascotes label, .mascotes .mascote-selected {
+    position: absolute; }
+  .mascotes .mascotes-bg img,
+  .mascotes .mascote-selected {
+    width: 100%; }
+  .mascotes .mascote-selected {
+    background-size: cover;
+    height: 99%; }
+  .mascotes .mascote-jacare {
+    width: 14%;
+    height: 17%;
+    bottom: 14%;
+    right: 11%; }
+  .mascotes .mascote-arara {
+    width: 13%;
+    height: 45%;
+    top: 9%;
+    right: 4%; }
+  .mascotes .mascote-onca {
+    width: 13%;
+    height: 31%;
+    bottom: 37%;
+    right: 25%; }
+  .mascotes .mascote-preguica {
+    width: 13%;
+    height: 38%;
+    top: 6%;
+    left: 26%; }
+  .mascotes .mascote-lobo {
+    width: 14%;
+    height: 34%;
+    bottom: 14%;
+    left: 8%; }
+  .mascotes .mascote-tamandua {
+    width: 14%;
+    height: 34%;
+    bottom: 9%;
+    left: 38%; }
+  .mascotes .mascote-rd-jacare:checked ~ .mascote-selected {
+    background-image: url(../universo/images/Jacare.png); }
 
 /*# sourceMappingURL=_universo.css.map */

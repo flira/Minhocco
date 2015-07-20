@@ -17,20 +17,20 @@
   <meta property="og:title" content="Minhocco">
   <meta property="og:type" content="Minhocco:page">
   <meta property="og:image" content="favicon.ico">
-  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <!-- Add to homescreen -->
-  <link rel="manifest" href="../manifest.json">
+  <link rel="manifest" href="manifest.json">
 
   <!-- Fallback to homescreen for Chrome <39 on Android -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="Minhocco">
-  <link rel="icon" sizes="192x192" href="../images/touch/chrome-touch-icon-192x192.png">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Minhocco">
-  <link rel="apple-touch-icon" href="../images/touch/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
 
   <!-- Tile icon for Win8 (144x144 + tile color) -->
   <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
@@ -39,112 +39,71 @@
 
   <!-- IE fixes -->
   <!--[if lt IE 8]>
-    <script src="../scripts/a.ielt8.js"></script>
+    <script src="scripts/a.ielt8.js"></script>
   <![endif]-->
   <!--[if IE 8]>
-    <script src="../scripts/a.ie8.js"></script>
+    <script src="scripts/a.ie8.js"></script>
   <![endif]-->
   <!--[if IE lte 8]>
     <script type="text/javascript">window.ltIE9 = true;</script>
-    <script src="../scripts/IE9.js"></script>
-    <script src="../https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+    <script src="scripts/IE9.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
   <![endif]-->
   <!--[if IE lte 9]>
-    <script src="../scripts/a.js"></script>
-    <script src="../scripts/TweenLite.js"></script>
+    <script src="scripts/a.js"></script>
+    <script src="scripts/TweenLite.js"></script>
   <![endif]-->
 
   <!-- Page styles -->
-  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 
-<body class="pg-encontre pg-sub">
+<body class="pg-parque">
   <header class="body-header">
     <div class="encap">
       <div class="logo-holder">
-        <a href="/" class="sprt logo">Início</a>
+        <a href="https://minhocco-flira.c9.io/wordpress/" class="sprt logo">Início</a>
       </div>
-      <input class="main-menu-ctrl" id="main-menu-ctrl" type="checkbox" value="visible" aria-hidden="true"/>
+      <input class="main-menu-ctrl" id="main-menu-ctrl" type="checkbox" value="visible" aria-hidden="true">
       <div class="main-navigation-bar">
         <label class="main-menu-label" for="main-menu-ctrl">Menu</label>
         <nav class="main-menu">
           <ul class="main-menu-list">
-            <li><a class="main-menu-a universo" id="main-menu-1" href="">universo</a>
-            </li>
-            <li><a class="main-menu-a guardaroupa" id="main-menu-2" href="">guarda-roupa</a>
-            </li>
-            <li><a class="main-menu-a parque" id="main-menu-3" href="">parque</a>
-            </li>
-            <li><a class="main-menu-a encontre selected" id="main-menu-4" href="">encontre a minhocco</a>
-            </li>
-            <li><a class="main-menu-a lojinha" id="main-menu-5" href="">lojinha</a>
-            </li>
+            <li><a class="main-menu-a universo" href="https://minhocco-flira.c9.io/wordpress/universo/">universo</a></li>
+            <li><a class="main-menu-a guardaroupa" href="https://minhocco-flira.c9.io/wordpress/guarda-roupa/">guarda-roupa</a></li>
+            <li><a class="main-menu-a parque selected" href="https://minhocco-flira.c9.io/wordpress/brincadeiras/">brincadeiras</a></li>
+            <li><a class="main-menu-a encontre" href="https://minhocco-flira.c9.io/wordpress/encontre/">encontre a minhocco</a></li>
+            <li><a class="main-menu-a lojinha" href="https://minhocco-flira.c9.io/wordpress/lojinha/">lojinha</a></li>
           </ul>
         </nav>
-        <form class="search" id="search">
-          <input class="search-field" id="search-field" type="search" aria-label="busca"/>
-          <input class="sprt search-submit" type="submit" value="" aria-label="enviar busca" />
+        <form class="search ng-pristine ng-valid" id="search">
+          <input class="search-field" id="search-field" type="search" aria-label="busca">
+          <input class="sprt search-submit" type="submit" value="" aria-label="enviar busca">
         </form>
       </div>
     </div>
-    <nav class="sub-menu">
-      <ul class="sub-menu-list encap">
-        <li class="sub-menu-item"><a class="sub-menu-a selected" id="sub-menu-1" href="../">contato</a>
-</li>
-        <li class="sub-menu-item"><a class="sub-menu-a" id="sub-menu-2" href="../">clipping</a>
-</li>
-        <li class="sub-menu-item"><a class="sub-menu-a " id="sub-menu-3" href="../">onde achar</a>
-</li>
-      </ul>
-    </nav>
   </header>
-
   <main class="body-main" role="main">
-    <fl-banner>
-      <ul>
-        <li>
-          <a href="#">
-            <figure class="img-zoom">
-              <figcaption>
-                
-              </figcaption>
-              <img src="images/placeholders/Slideshow.jpg" alt="" />
-            </figure>
-            <img src="images/placeholders/Slideshow.jpg" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="#2">
-            <figure class="img-zoom">
-              <figcaption>
-                
-              </figcaption>
-              <img src="images/placeholders/Slideshow.jpg" alt="" />
-            </figure>
-            <img src="images/placeholders/Slideshow.jpg" alt="" />
-            </a>
-        </li>
-        <li>
-          <a href="#2">
-            <figure class="img-zoom">
-              <figcaption>
-                
-              </figcaption>
-              <img src="images/placeholders/Slideshow.jpg" alt="" />
-            </figure>
-            <img src="images/placeholders/Slideshow.jpg" alt="" />
-            </a>
-        </li>
-      </ul>
-    </fl-banner>
+
+
+    <ul>
+      <li>
+        <a href="Para imprimir"><img src="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Para-imprimir.png"></a>
+      </li>
+      <li>
+        <a href="Para pintar"><img src="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Para-pintar.png"></a>
+      </li>
+    </ul>
+
   </main>
+
 
   <footer class="body-footer">
     <div class="encap">
-      <form id="newsletter" class="newsletter">
+      <form id="newsletter" class="newsletter ng-pristine ng-valid">
         <h1>Fique atento às novidades!</h1>
-        <input class="newsletter-email" id="newsletter-email" placeholder="e-mail" />
-        <input class="newsletter-submit" type="submit" value="inscreva-se" />
+        <input class="newsletter-email" id="newsletter-email" placeholder="e-mail">
+        <input class="newsletter-submit" type="submit" value="inscreva-se">
       </form>
       <div class="site-map">
         <nav>
@@ -210,7 +169,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
 
-  <script src="../scripts/main.js"></script>
+  <script src="https://minhocco-flira.c9.io/wordpress/wp-content/themes/minhocco/scripts/main.js"></script>
   <!--<script>
     (function(i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
@@ -227,6 +186,5 @@
     ga('send', 'pageview');
   </script>-->
   <!-- Built with love using Google Toolkit -->
-</body>
 
-</html>
+</body>

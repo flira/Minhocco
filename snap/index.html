@@ -13,16 +13,31 @@
     <script>
     
       var a = Snap("#svg");
-      
+      var corEscolhida = '#fff';
+      var cores = ['#009245','#8BC540' , '#FAEC20','#EF5A28' , '#EB1F27','#47C6F4' , '#2D3091', '#91298B', '#E90D8A',  '#BD1E2C','#C3996B' , '#754B28', '#ffffff','#929294' , '#000000'];
+      Snap.load("paleta.svg", function(f){
+        var paleta = f.selectAll("image");
+        for(i = 0; i < paleta.length; i++){
+          
+          paleta[i].appendTo(a);
+          paleta[i].attr({fill: cores[i]});
+          
+          paleta[i].click(function(){
+            corEscolhida = this.attr("fill");
+          });
+          
+        }
+      });
       Snap.load("bichinho_para_colorir.svg", function (f) {
                 var preenchimento = f.select("#Preenchimento");
                 var linhas = f.select("#Linhas");
                 preenchimento.appendTo(a);
                 linhas.appendTo(a);
                 var paths = preenchimento.selectAll("path");
-                for(a = 1; a < paths.length; a++){
-                  paths[a].click(function(){
-                    this.attr({fill: "#fc0"});
+                for(i = 1; i < paths.length; i++){
+                  paths[i].click(function(){
+                    this.attr({fill: corEscolhida});
+                    console.log(corEscolhida);
                   });
                 }
             });
