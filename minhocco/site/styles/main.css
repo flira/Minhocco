@@ -481,7 +481,7 @@ ________________________________________________________________________________
 .body-header {
   position: fixed; }
 
-.logo, .sub-menu, .body-footer .icon-minhocco, .popup {
+.logo, .sub-menu, .body-footer .icon-minhocco, .popup, .popup-sprt {
   position: absolute; }
 
 .encap, .pg-guardaroupa .body-main {
@@ -790,7 +790,8 @@ ________________________________________________________________________________
 [class|=icon],
 .main-menu-a:hover,
 .main-menu-a:focus,
-.main-menu-a.selected {
+.main-menu-a.selected,
+.popup-sprt {
   background: url("img/sprites.png") no-repeat 0 0; }
 
 /*
@@ -1014,15 +1015,40 @@ ________________________________________________________________________________
   color: #fff;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
+  bottom: 47%;
+  left: 30%;
+  overflow: hidden;
+  border-radius: 50px;
+  max-width: 0;
+  max-height: 0;
   margin: auto;
   transition: all ease-in-out .5s; }
 
 .popup-ctrl:checked ~ .popup {
   max-width: 33%;
   max-height: 60%;
-  padding: 20px; }
+  padding: 20px 40px;
+  border-radius: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+.popup-ctrl:checked ~ .popup-sprt {
+  background-color: transparent;
+  background-position: 0 -177px;
+  border-radius: 0;
+  width: 24px;
+  height: 24px; }
+
+.popup-sprt {
+  transition: all ease-in-out .5s;
+  background-color: rgba(140, 199, 85, 0.8);
+  background-position: 0 -155px;
+  border-radius: 15px;
+  width: 15px;
+  height: 15px;
+  top: 22%;
+  right: 34%; }
 
 /*
 ________________________________________________________________________________
