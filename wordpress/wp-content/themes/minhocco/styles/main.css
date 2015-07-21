@@ -487,7 +487,7 @@ ________________________________________________________________________________
 .logo, .sub-menu, .encap.sub-menu-list, .fechar, .body-footer .icon-minhocco, .popup, .popup-sprt {
   position: absolute; }
 
-.encap, .pg-guardaroupa .body-main {
+.encap, .main-menu-a, .pg-guardaroupa .body-main {
   position: relative; }
 
 /*
@@ -633,6 +633,7 @@ ________________________________________________________________________________
   height: 1.7em; }
 
 .encap.sub-menu-list {
+  padding: 0;
   text-align: left; }
 
 .sub-menu-a,

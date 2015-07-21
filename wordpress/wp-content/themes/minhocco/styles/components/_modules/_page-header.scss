@@ -55,6 +55,7 @@
   font-size: 1.25em;
 }
 .main-menu-a {
+  @extend %relative;
   color: $colorHeaderMenu;
   padding: 10px;
   margin: -10px 2px 0;
@@ -94,6 +95,7 @@
 }
 .encap.sub-menu-list {
   @extend %absolute;
+  padding: 0;
   text-align: left;
 }
 .sub-menu-a,

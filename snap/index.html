@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Exemplo</title>
-    <script src="js/snap.svg-min.js"></script>
+    
     
 </head>
 <body>
-    <svg id="svg" width="1000" height="1000">
+  <div style="width:400px; height:600px;">
+    <svg id="svg" viewbox="0 0 400 600">
     </svg>
-    
+  </div>
+  <script src="js/snap.svg-min.js"></script>
     <script>
     
       var a = Snap("#svg");
@@ -29,15 +31,20 @@
         }
       });
       Snap.load("bichinho_para_colorir.svg", function (f) {
+                
                 var preenchimento = f.select("#Preenchimento");
                 var linhas = f.select("#Linhas");
+                
+                preenchimento.transform("S0.75");
+                linhas.transform("S0.75");
+                
                 preenchimento.appendTo(a);
+                
                 linhas.appendTo(a);
                 var paths = preenchimento.selectAll("path");
                 for(i = 1; i < paths.length; i++){
                   paths[i].click(function(){
                     this.attr({fill: corEscolhida});
-                    console.log(corEscolhida);
                   });
                 }
             });

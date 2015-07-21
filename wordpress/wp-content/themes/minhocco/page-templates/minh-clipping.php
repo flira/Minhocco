@@ -13,43 +13,26 @@ get_header(); ?>
 <body <?php body_class("pg-sub pg-encontre"); ?>>
   <?php echo get_template_part("menu", "geral");?>
   <main class="body-main" role="main">
-     <fl-banner>
-      <ul>
-        <li>
-          <a href="#">
-            <figure class="img-zoom">
-              <figcaption>
-                
-              </figcaption>
+     <!-- Lira, usar lightbox -->
+      <div class="block-line colx4 zoom">
+        <div class="col">
+            <a href="image-big" rel="clipping" title="Aqui vai o conteúdo de caption">
               <img src="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" alt="" />
-            </figure>
-            <img src="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" alt="" />
-          </a>
-        </li>
-        <li>
-          <a href="#2">
-            <figure class="img-zoom">
-              <figcaption>
-                
-              </figcaption>
-              <img src="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" alt="" />
-            </figure>
-            <img src="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" alt="" />
             </a>
-        </li>
-        <li>
-          <a href="#2">
-            <figure class="img-zoom">
-              <figcaption>
-                
-              </figcaption>
+        </div><div class="col">
+            <a href="image-big" rel="clipping" title="Aqui vai o conteúdo de caption">
               <img src="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" alt="" />
-            </figure>
-            <img src="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" alt="" />
             </a>
-        </li>
-      </ul>
-    </fl-banner>
+        </div><div class="col">
+            <a href="image-big" rel="clipping" title="Aqui vai o conteúdo de caption">
+              <img src="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" alt="" />
+            </a>
+        </div><div class="col">
+            <a href="image-big" rel="clipping" title="Aqui vai o conteúdo de caption">
+              <img src="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" alt="" />
+            </a>
+        </div>
+      </div>
   </main>
 
 <?php
