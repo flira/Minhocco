@@ -7,10 +7,12 @@
     return document.querySelector(el).offsetWidth;
   };
   var pos = function ( ) {
-    var x = lft(".body-header .encap") + 85;
-    x += lft(".main-menu-a.selected");
-    x -= (wdt(".encap.sub-menu-list") / 2);
-    $q(".encap.sub-menu-list").css('left',x + 'px');
+    if ($q(".encap.sub-menu-list").length) {
+      var x = lft(".body-header .encap") + 85;
+      x += lft(".main-menu-a.selected");
+      x -= (wdt(".encap.sub-menu-list") / 2);
+      $q(".encap.sub-menu-list").css('left',x + 'px');
+    }
   };
   $e(window).bind('resize', function(e) {
     pos();
