@@ -384,6 +384,9 @@ ________________________________________________________________________________
   src: url("../fonts/fingerpaint.eot?#iefix") format("embedded-opentype"), url("../fonts/fingerpaint.woff2") format("woff2"), url("../fonts/fingerpaint.woff") format("woff"), url("../fonts/fingerpaint.ttf") format("truetype"), url("../fonts/fingerpaint.svg#asapitalic") format("svg");
   font-weight: 700;
   font-style: normal; }
+.pg-guardaroupa .nome-colecao {
+  font-family: fingerpaint, sans-serif; }
+
 /*
   [0.2.2]Font sizes, paddings and weights
 */
@@ -395,7 +398,7 @@ h5,
 p {
   margin: 0; }
 
-.main-menu-a:hover, .main-menu-a:focus, .main-menu-a.selected, .sub-menu-a.selected, .sub-menu-a:hover, .body-footer h1, .newsletter .newsletter-submit {
+.pg-guardaroupa .nome-colecao, .main-menu-a:hover, .main-menu-a:focus, .main-menu-a.selected, .sub-menu-a.selected, .sub-menu-a:hover, .body-footer h1, .newsletter .newsletter-submit {
   font-weight: 700; }
 
 .small,
@@ -481,16 +484,16 @@ ________________________________________________________________________________
 .body-header {
   position: fixed; }
 
-.logo, .sub-menu, .body-footer .icon-minhocco, .popup, .popup-sprt {
+.logo, .sub-menu, .encap.sub-menu-list, .fechar, .body-footer .icon-minhocco, .popup, .popup-sprt {
   position: absolute; }
 
-.encap, .pg-guardaroupa .body-main {
+.encap, .main-menu-a, .pg-guardaroupa .body-main {
   position: relative; }
 
 /*
   [1.1.2]Floats
 */
-.newsletter .newsletter-submit {
+.newsletter .newsletter-submit, .pg-parque .homescreen .imprimir {
   float: right; }
 
 .search-submit {
@@ -507,8 +510,10 @@ ________________________________________________________________________________
   padding: 0 20px;
   margin: auto; }
 
-.logo, .body-footer .icon-minhocco, .social-medias [class|=icon] {
+.logo, .body-footer .icon-minhocco, .social-medias [class|=icon], .pg-parque .homescreen .col a {
   display: block;
+  direction: ltr;
+  overflow: hidden;
   text-indent: -9999px; }
 
 /*
@@ -624,9 +629,11 @@ ________________________________________________________________________________
   background-color: #dcddde;
   bottom: -2.6em;
   padding: .2em 0;
-  width: 100%; }
+  width: 100%;
+  height: 1.7em; }
 
 .encap.sub-menu-list {
+  padding: 0;
   text-align: left; }
 
 .sub-menu-a,
@@ -791,6 +798,7 @@ ________________________________________________________________________________
 .main-menu-a:hover,
 .main-menu-a:focus,
 .main-menu-a.selected,
+.fechar,
 .popup-sprt {
   background: url("img/sprites.png") no-repeat 0 0; }
 
@@ -832,6 +840,11 @@ ________________________________________________________________________________
 
 .icon-youtube {
   background-position: -99px -179px; }
+
+.fechar {
+  background-position: 0 -177px;
+  width: 24px;
+  height: 24px; }
 
 /*
 ________________________________________________________________________________
@@ -1015,10 +1028,9 @@ ________________________________________________________________________________
   color: #fff;
   top: 0;
   right: 0;
-  bottom: 47%;
-  left: 30%;
+  bottom: 51%;
+  left: 31%;
   overflow: hidden;
-  border-radius: 50px;
   max-width: 0;
   max-height: 0;
   margin: auto;
@@ -1028,7 +1040,6 @@ ________________________________________________________________________________
   max-width: 33%;
   max-height: 60%;
   padding: 20px 40px;
-  border-radius: 0;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1038,15 +1049,15 @@ ________________________________________________________________________________
   background-position: 0 -177px;
   border-radius: 0;
   width: 24px;
-  height: 24px; }
+  height: 25px; }
 
 .popup-sprt {
   transition: all ease-in-out .5s;
   background-color: rgba(140, 199, 85, 0.8);
   background-position: 0 -155px;
   border-radius: 15px;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   top: 22%;
   right: 34%; }
 
@@ -1124,6 +1135,33 @@ ________________________________________________________________________________
 .pg-guardaroupa .fl-banner-holder,
 .pg-guardaroupa .banner-mask {
   background-color: #792b84; }
+.pg-guardaroupa h1 {
+  font-size: 1.2em;
+  padding-bottom: 1em; }
+.pg-guardaroupa p {
+  font-size: 1.14286em; }
+
+/*
+________________________________________________________________________________
+
+  [5.3]Brincadeiras
+*/
+.pg-parque .homescreen .block-line {
+  background: url(img/Rapport_Brincadeiras.png) #24b7b8; }
+.pg-parque .homescreen .col:first-child {
+  text-align: right; }
+.pg-parque .homescreen .col a {
+  background-size: contain;
+  margin: 45px .5em; }
+.pg-parque .homescreen .imprimir {
+  background-image: url(https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Para-imprimir.png);
+  width: 259px;
+  height: 258px;
+  text-align: left; }
+.pg-parque .homescreen .pintar {
+  background-image: url(https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Para-pintar.png);
+  width: 286px;
+  height: 283px; }
 
 /*
 ________________________________________________________________________________
@@ -1253,11 +1291,8 @@ ________________________________________________________________________________
     .grid-onde .local address {
       font-size: 0.85714em; }
     .grid-onde .local .fechar {
-      position: absolute;
       top: 1em;
-      right: 1em;
-      width: 22px;
-      height: 23px; }
+      right: 1em; }
   .grid-onde .block-line:nth-child(2) .grid-onde-content {
     top: 369px; }
   .grid-onde .block-line:nth-child(3) .grid-onde-content {

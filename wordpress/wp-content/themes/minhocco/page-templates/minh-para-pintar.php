@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Minhocco Generica
+ * Template Name: Minhocco para pintar
  *
  * @package WordPress
  * @subpackage Minhocco
@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-<body <?php body_class(); ?>>
+<body <?php body_class("pg-sub pg-parque"); ?>>
 <?php echo get_template_part("menu", "geral");?>
 <main class="body-main" role="main">
 

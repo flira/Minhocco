@@ -1,17 +1,26 @@
-(function(a) {
+(function(ng) {
   'use strict';
   var el, radios, panes, self,
   
   $a = function(p,el,n) {
     // A quick way to rewrap elements into jqlite.
-    return a.element(p.find(el)[n]);
+    return ng.element(p.find(el)[n]);
   },
-
-  animateRadios = function () {
+  
+  animateRadiosFn = function () {
     radios.find('label').removeClass('selected');
-    a.element(panes).removeClass('selected');
+    ng.element(panes).removeClass('selected');
     $a(radios,'label',self.radioValue).addClass('selected');
-    a.element(panes[self.radioValue]).addClass('selected');
+    ng.element(panes[self.radioValue]).addClass('selected');
+  },
+  
+  repeatItensFn = function () {
+    var first = ng.element(panes[0]).clone(),
+        last = ng.element(panes[panes.length - 1]).clone();
+        ng.element(first).addClass('dummy');
+        ng.element(last).addClass('dummy');
+        el.find('ul').prepend(last);
+        el.find('ul').append(first);
   },
 
   setClassesFn = function () {
@@ -54,7 +63,7 @@
   },
 
   moveBannerFn = function() {
-    animateRadios();
+    animateRadiosFn();
     if (!window.TweenLite) {
       el.find('ul').css('left', (-self.radioValue * 100) + '%');
     }
@@ -69,10 +78,11 @@
   initFn = function () {
     self.adjustSizes();
     window.onresize = self.adjustSizes;
+    //self.repeatItens();
     self.setClasses();
   };
 
-  a.module('flBanner', [])
+  ng.module('flBanner', [])
     .directive('flBanner', function() {
       return {
         restrict: 'E',
@@ -80,26 +90,27 @@
         scope: {},
         controller: function ($scope, $element) {
           /* 
-           * 1 - Check if browser have support for CSS transitions,
-                 but needs modernizr.
-           * 2 - Make an alias for the "transclude" div,
-           * 3 - Make an alias for the radios nav,
-           * 4 - Select every "li" tag and add it to the controller scope,
+           * 1 - Make an alias for the "transclude" div,
+           * 2 - Make an alias for the radios nav,
+           * 3 - Removes dummy "li" from the "panes"
            */
           
           el = $element.children()[0], //1
           radios = $a($element,'nav',1), //2
-          panes = $scope.panes = el.getElementsByTagName('li'), //3
+          panes = $scope.panes =  el.getElementsByTagName('li'),
           self = this;
+          console.log('here');
 
-          a.element(document).ready(function () {
+          ng.element(document).ready(function () {
             // 1 - Rewrap "data-ng-transclude" with jqlite, for easier access;
             // 2 - Set the first pannel as the default pannel.
-            el = a.element(el); //1
+            el = ng.element(el); //1
+            self.trueLength = panes.length;
             self.timerValue = 10000;
             self.radioValue = '0'; //2
             
-            self.animateRadios = animateRadios,
+            self.animateRadios = animateRadiosFn,
+            self.repeatItens = repeatItensFn,
             self.setClasses = setClassesFn,
             self.adjustSizes = adjustSizesFn,
             self.changeRadioValue = changeRadioValueFn,

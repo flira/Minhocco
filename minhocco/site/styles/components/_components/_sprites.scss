@@ -64,3 +64,11 @@
 .icon-youtube {
   background-position: -99px -179px;
 }
+
+.fechar {
+  @extend %absolute;
+  @extend %sprites;
+  background-position: 0 -177px;
+  width: 24px;
+  height: 24px;
+}

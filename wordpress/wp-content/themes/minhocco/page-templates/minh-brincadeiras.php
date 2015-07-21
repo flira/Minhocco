@@ -10,19 +10,19 @@
 
 get_header(); ?>
 
-<body <?php body_class('pg-brincadeiras'); ?>>
+<body <?php body_class('pg-parque'); ?>>
 <?php echo get_template_part("menu", "geral");?>
 <main class="body-main" role="main">
 
-     <?php
-        if ( have_posts() ) : while ( have_posts() ) : the_post();
-          $html = do_shortcode(get_the_content());
-          $divs = minhocco_brincadeiras_separa_galerias($html);
-          $html_conteudo = minhocco_brincadeiras_galeria_1($divs);
-           echo $html_conteudo;
-        endwhile; else: ?>
-          
-     <?php endif; ?>
+     <nav class="homescreen">
+      <ul class="block-line colx2">
+        <li class="col">
+          <a class="imprimir" href="https://minhocco-flira.c9.io/wordpress/brincadeiras/para-imprimir-2">Para imprimir</a>
+        </li><li class="col">
+          <a class="pintar" href="https://minhocco-flira.c9.io/wordpress/brincadeiras/para-pintar-2/">Para pintar</a>
+        </li>
+      </ul>
+    </nav>
      
   </main>
 

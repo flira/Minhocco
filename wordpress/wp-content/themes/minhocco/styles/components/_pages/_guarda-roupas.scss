@@ -3,4 +3,17 @@
   .banner-mask {
     background-color: $colorGR;
   }
+  .body-main {
+    @extend %relative;
+  }
+  h1 {
+    font-size: 1.2em;
+    padding-bottom: 1em;
+  }
+  p {
+    font-size: toEm(16);
+  }
+  .nome-colecao {
+    @extend %font2;
+  }
 }

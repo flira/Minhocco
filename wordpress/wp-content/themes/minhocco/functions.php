@@ -62,6 +62,7 @@ function minhocco_menu($menu_itens){
   $html_conteudo = $html_conteudo.'</ul>
         </nav>
         <form class="search" id="search">
+          
           <input class="search-field" id="search-field" type="search" aria-label="busca"/>
           <input class="sprt search-submit" type="submit" value="" aria-label="enviar busca" />
         </form>
@@ -72,7 +73,7 @@ function minhocco_menu($menu_itens){
 
 function minhocco_submenu($page_id) { 
 	global $post;
-	$children = get_pages('child_of='.$page_id.'&parent='.$page_id);
+	$children = get_pages('child_of='.$page_id.'&parent='.$page_id.'&sort_column=menu_order');
 	$html_conteudo = '<nav class="sub-menu">
       <ul class="sub-menu-list encap">';
   $pid = get_the_ID();
@@ -211,7 +212,7 @@ function minhocco_brincadeiras_galeria_1($div_galeria_1){
 	//criando o loop para retornar o html montado
 	$html_conteudo = 
 	 '
-    <ul>';
+    <ul class="block-line colx2">';
     for($i = 1; $i < count($srcs); $i++){
         $html_conteudo = $html_conteudo.'<li>
         <a href='.$alts[$i].'><img '.$srcs[$i].' /></a>
@@ -276,6 +277,7 @@ function minhocco_guarda_roupa_popup_1($titulo, $texto){
         <h1>'.$titulo.'</span></h1>
         <p>'.$texto.'</p>
       </div>
+      <label class="popup-sprt fechar" for="popup-ctrl" aria-hidden="true"></label>
     </div>';
     return $html_conteudo;
   

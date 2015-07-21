@@ -1,6 +1,6 @@
 .body-header {
   @extend %fixed;
-  background:$bodyBackgroundColor;
+  background:$mainBgColor;
   top: 0;
   width: 100%;
   z-index: 99;
@@ -90,8 +90,10 @@
   bottom: -2.6em;
   padding: .2em 0;
   width: 100%;
+  height: 1.7em;
 }
 .encap.sub-menu-list {
+  @extend %absolute;
   text-align: left;
 }
 .sub-menu-a,
@@ -100,7 +102,7 @@
 }
 .sub-menu-item {
   &::before {
-    content: "•";
+    content: " ";
     padding: 0 toEm(18);
   }
   &:first-child {

@@ -384,6 +384,9 @@ ________________________________________________________________________________
   src: url("../fonts/fingerpaint.eot?#iefix") format("embedded-opentype"), url("../fonts/fingerpaint.woff2") format("woff2"), url("../fonts/fingerpaint.woff") format("woff"), url("../fonts/fingerpaint.ttf") format("truetype"), url("../fonts/fingerpaint.svg#asapitalic") format("svg");
   font-weight: 700;
   font-style: normal; }
+.pg-guardaroupa .nome-colecao {
+  font-family: fingerpaint, sans-serif; }
+
 /*
   [0.2.2]Font sizes, paddings and weights
 */
@@ -395,7 +398,7 @@ h5,
 p {
   margin: 0; }
 
-.main-menu-a:hover, .main-menu-a:focus, .main-menu-a.selected, .sub-menu-a.selected, .sub-menu-a:hover, .body-footer h1, .newsletter .newsletter-submit {
+.pg-guardaroupa .nome-colecao, .main-menu-a:hover, .main-menu-a:focus, .main-menu-a.selected, .sub-menu-a.selected, .sub-menu-a:hover, .body-footer h1, .newsletter .newsletter-submit {
   font-weight: 700; }
 
 .small,
@@ -481,7 +484,7 @@ ________________________________________________________________________________
 .body-header {
   position: fixed; }
 
-.logo, .sub-menu, .body-footer .icon-minhocco, .popup {
+.logo, .sub-menu, .encap.sub-menu-list, .fechar, .body-footer .icon-minhocco, .popup, .popup-sprt {
   position: absolute; }
 
 .encap, .pg-guardaroupa .body-main {
@@ -490,7 +493,7 @@ ________________________________________________________________________________
 /*
   [1.1.2]Floats
 */
-.newsletter .newsletter-submit {
+.newsletter .newsletter-submit, .pg-parque .homescreen .imprimir {
   float: right; }
 
 .search-submit {
@@ -507,8 +510,10 @@ ________________________________________________________________________________
   padding: 0 20px;
   margin: auto; }
 
-.logo, .body-footer .icon-minhocco, .social-medias [class|=icon] {
+.logo, .body-footer .icon-minhocco, .social-medias [class|=icon], .pg-parque .homescreen .col a {
   display: block;
+  direction: ltr;
+  overflow: hidden;
   text-indent: -9999px; }
 
 /*
@@ -624,7 +629,8 @@ ________________________________________________________________________________
   background-color: #dcddde;
   bottom: -2.6em;
   padding: .2em 0;
-  width: 100%; }
+  width: 100%;
+  height: 1.7em; }
 
 .encap.sub-menu-list {
   text-align: left; }
@@ -732,6 +738,12 @@ body[class*=pg].pg-sub .body-main {
 .pg-guardaroupa .sub-menu-a.selected, .pg-guardaroupa .sub-menu-a:hover {
   color: #792b84; }
 
+.pg-parque .body-main,
+.pg-parque .body-header {
+  border-bottom: 13px solid #ef5a28; }
+.pg-parque .sub-menu-a.selected, .pg-parque .sub-menu-a:hover {
+  color: #ef5a28; }
+
 .pg-encontre .body-main,
 .pg-encontre .body-header {
   border-bottom: 13px solid #24b7b8; }
@@ -784,7 +796,9 @@ ________________________________________________________________________________
 [class|=icon],
 .main-menu-a:hover,
 .main-menu-a:focus,
-.main-menu-a.selected {
+.main-menu-a.selected,
+.fechar,
+.popup-sprt {
   background: url("img/sprites.png") no-repeat 0 0; }
 
 /*
@@ -797,7 +811,7 @@ ________________________________________________________________________________
   background-position: 2px -69px; }
 
 .parque:hover, .parque:focus, .parque.selected {
-  background-position: -75px -37px; }
+  background-position: -70px -39px; }
 
 .encontre:hover, .encontre:focus, .encontre.selected {
   background-position: 2px -100px; }
@@ -825,6 +839,11 @@ ________________________________________________________________________________
 
 .icon-youtube {
   background-position: -99px -179px; }
+
+.fechar {
+  background-position: 0 -177px;
+  width: 24px;
+  height: 24px; }
 
 /*
 ________________________________________________________________________________
@@ -1008,15 +1027,38 @@ ________________________________________________________________________________
   color: #fff;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
+  bottom: 51%;
+  left: 31%;
+  overflow: hidden;
+  max-width: 0;
+  max-height: 0;
   margin: auto;
   transition: all ease-in-out .5s; }
 
 .popup-ctrl:checked ~ .popup {
   max-width: 33%;
   max-height: 60%;
-  padding: 20px; }
+  padding: 20px 40px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+.popup-ctrl:checked ~ .popup-sprt {
+  background-color: transparent;
+  background-position: 0 -177px;
+  border-radius: 0;
+  width: 24px;
+  height: 25px; }
+
+.popup-sprt {
+  transition: all ease-in-out .5s;
+  background-color: rgba(140, 199, 85, 0.8);
+  background-position: 0 -155px;
+  border-radius: 15px;
+  width: 20px;
+  height: 20px;
+  top: 22%;
+  right: 34%; }
 
 /*
 ________________________________________________________________________________
@@ -1025,6 +1067,65 @@ ________________________________________________________________________________
 
   [5.1]Universo
 */
+.mascotes {
+  position: relative;
+  width: 100%; }
+  .mascotes input {
+    display: none; }
+  .mascotes label, .mascotes li {
+    display: block;
+    z-index: 9999; }
+  .mascotes label, .mascotes .mascote-selected {
+    position: absolute; }
+  .mascotes .mascotes-bg img,
+  .mascotes .mascote-selected {
+    width: 100%; }
+  .mascotes .mascote-selected {
+    background-size: cover;
+    height: 99%; }
+  .mascotes .mascote-jacare {
+    width: 14%;
+    height: 17%;
+    bottom: 14%;
+    right: 11%; }
+  .mascotes .mascote-arara {
+    width: 13%;
+    height: 45%;
+    top: 9%;
+    right: 4%; }
+  .mascotes .mascote-onca {
+    width: 13%;
+    height: 31%;
+    bottom: 37%;
+    right: 25%; }
+  .mascotes .mascote-preguica {
+    width: 13%;
+    height: 38%;
+    top: 6%;
+    left: 26%; }
+  .mascotes .mascote-lobo {
+    width: 14%;
+    height: 34%;
+    bottom: 14%;
+    left: 8%; }
+  .mascotes .mascote-tamandua {
+    width: 14%;
+    height: 34%;
+    bottom: 9%;
+    left: 38%; }
+  .mascotes .mascote-rd-jacare:checked ~ .mascote-selected {
+    background-image: url(../universo/images/Jacare.png); }
+  .mascotes .mascote-rd-arara:checked ~ .mascote-selected {
+    background-image: url(../universo/images/Arara.png); }
+  .mascotes .mascote-rd-onca:checked ~ .mascote-selected {
+    background-image: url(../universo/images/Onca.png); }
+  .mascotes .mascote-rd-preguica:checked ~ .mascote-selected {
+    background-image: url(../universo/images/Preguica.png); }
+  .mascotes .mascote-rd-lobo:checked ~ .mascote-selected {
+    background-image: url(../universo/images/Lobo-guara.png); }
+  .mascotes .mascote-rd-tamandua:checked ~ .mascote-selected {
+    background-image: url(../universo/images/Tamandua.png); }
+
 /*
 ________________________________________________________________________________
 
@@ -1033,6 +1134,33 @@ ________________________________________________________________________________
 .pg-guardaroupa .fl-banner-holder,
 .pg-guardaroupa .banner-mask {
   background-color: #792b84; }
+.pg-guardaroupa h1 {
+  font-size: 1.2em;
+  padding-bottom: 1em; }
+.pg-guardaroupa p {
+  font-size: 1.14286em; }
+
+/*
+________________________________________________________________________________
+
+  [5.3]Brincadeiras
+*/
+.pg-parque .homescreen .block-line {
+  background: url(img/Rapport_Brincadeiras.png) #24b7b8; }
+.pg-parque .homescreen .col:first-child {
+  text-align: right; }
+.pg-parque .homescreen .col a {
+  background-size: contain;
+  margin: 45px .5em; }
+.pg-parque .homescreen .imprimir {
+  background-image: url(https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Para-imprimir.png);
+  width: 259px;
+  height: 258px;
+  text-align: left; }
+.pg-parque .homescreen .pintar {
+  background-image: url(https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Para-pintar.png);
+  width: 286px;
+  height: 283px; }
 
 /*
 ________________________________________________________________________________
@@ -1085,7 +1213,7 @@ ________________________________________________________________________________
   height: 189px; }
 
 .form-encap {
-  background: #792b84;
+  background: url(img/rapport-contato.png) #792b84;
   position: relative;
   text-align: left; }
   .form-encap label {
@@ -1094,7 +1222,6 @@ ________________________________________________________________________________
   .form-encap input,
   .form-encap select,
   .form-encap textarea {
-    -moz-appearance: none;
     -webkit-appearance: none;
     background: #24b7b8;
     border: none;
@@ -1163,11 +1290,8 @@ ________________________________________________________________________________
     .grid-onde .local address {
       font-size: 0.85714em; }
     .grid-onde .local .fechar {
-      position: absolute;
       top: 1em;
-      right: 1em;
-      width: 22px;
-      height: 23px; }
+      right: 1em; }
   .grid-onde .block-line:nth-child(2) .grid-onde-content {
     top: 369px; }
   .grid-onde .block-line:nth-child(3) .grid-onde-content {

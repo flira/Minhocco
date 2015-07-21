@@ -29,7 +29,7 @@
 }
 .parque {
   @include all-states {
-    background-position: -75px -37px;
+    background-position: -70px -39px;
   }
 }
 .encontre {
@@ -63,4 +63,12 @@
 }
 .icon-youtube {
   background-position: -99px -179px;
+}
+
+.fechar {
+  @extend %absolute;
+  @extend %sprites;
+  background-position: 0 -177px;
+  width: 24px;
+  height: 24px;
 }

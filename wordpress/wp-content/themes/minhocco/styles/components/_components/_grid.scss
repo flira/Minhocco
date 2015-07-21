@@ -44,6 +44,8 @@
 
 %hidden-text {
   display: block;
+  direction: ltr;
+  overflow: hidden;
   text-indent: -9999px;
 }
 
@@ -71,7 +73,7 @@
     margin: 0;
     margin-left: 1em;
   }
-  &.col-1 .col,
+  &.colx1 .col,
   .col img {
     width: 100%;
   }
@@ -80,7 +82,7 @@
     margin-left: 0;
   }
   @for $i from 2 through 6 {
-    &.colx#{$i} .col{
+    &.colx#{$i} > .col{
       $_n: 100% / $i;
       $_m: (($i - 1) / $i)+em;
       width: $_n - ($i * .25); //IE fallback
@@ -90,7 +92,7 @@
 }
 
 @include small {
-  .block-line.colx3 .col {
+  .block-line.colx3 > .col {
     width: 100%;
     margin-left: 0;
   }
