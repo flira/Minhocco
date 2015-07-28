@@ -16,19 +16,19 @@ get_header(); ?>
      <!-- Lira, usar lightbox -->
       <div class="block-line colx4 zoom">
         <div class="col">
-            <a href="image-big" rel="clipping" title="Aqui vai o conteúdo de caption">
+            <a  href="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" data-lightbox="clipping" title="Aqui vai o conteúdo de caption">
               <img src="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" alt="" />
             </a>
         </div><div class="col">
-            <a href="image-big" rel="clipping" title="Aqui vai o conteúdo de caption">
+            <a  href="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" data-lightbox="clipping" title="Aqui vai o conteúdo de caption">
               <img src="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" alt="" />
             </a>
         </div><div class="col">
-            <a href="image-big" rel="clipping" title="Aqui vai o conteúdo de caption">
+            <a  href="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" data-lightbox="clipping" title="Aqui vai o conteúdo de caption">
               <img src="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" alt="" />
             </a>
         </div><div class="col">
-            <a href="image-big" rel="clipping" title="Aqui vai o conteúdo de caption">
+            <a  href="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" data-lightbox="clipping" title="Aqui vai o conteúdo de caption">
               <img src="https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Slideshow.jpg" alt="" />
             </a>
         </div>

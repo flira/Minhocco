@@ -21,39 +21,39 @@
         <nav>
           <ul class="site-map-list">
             <li class="site-map-lvl1">
-              <h1><a href="/" class="icon-minhocco" id="map-1" title="minhocco">início</a></h1>
+              <h1><a href="http://minhocco.com.br/homolog" class="icon-minhocco" id="map-1" title="minhocco">início</a></h1>
             </li>
             <li class="site-map-lvl1">
-              <h1><a id="map-2" href="">universo minhocco</a></h1>
+              <h1><a id="map-2" href="http://minhocco.com.br/homolog/universo">universo minhocco</a></h1>
               <ul>
-                <li class="site-map-lvl2"><a id="map-3" href="">a minhocco</a>
+                <li class="site-map-lvl2"><a id="map-3" href="http://minhocco.com.br/homolog/a-minhocco">a minhocco</a>
                 </li>
-                <li class="site-map-lvl2"><a id="map-4" href="">equipe</a>
+                <li class="site-map-lvl2"><a id="map-4" href="http://minhocco.com.br/homolog/equipe">equipe</a>
                 </li>
-                <li class="site-map-lvl2"><a id="map-5" href="">turminha</a>
+                <li class="site-map-lvl2"><a id="map-5" href="http://minhocco.com.br/homolog/nossa-turminha">turminha</a>
                 </li>
               </ul>
             </li>
             <li class="site-map-lvl1">
-              <h1><a id="map-6" href="">guarda-roupa</a></h1>
+              <h1><a id="map-6" href="http://minhocco.com.br/homolog/guarda-roupa">guarda-roupa</a></h1>
             </li>
             <li class="site-map-lvl1">
-              <h1><a id="map-7" href="">parque</a></h1>
+              <h1><a id="map-7" href="http://minhocco.com.br/homolog/brincadeiras">parque</a></h1>
               <ul>
-                <li class="site-map-lvl2"><a id="map-8" href="">jogos</a>
+                <li class="site-map-lvl2"><a id="map-8" href="http://minhocco.com.br/homolog/para-imprimir">para imprimir</a>
                 </li>
-                <li class="site-map-lvl2"><a id="map-9" href="">estorinhas</a>
+                <li class="site-map-lvl2"><a id="map-9" href="http://minhocco.com.br/homolog/para-pintar">para pintar</a>
                 </li>
               </ul>
             </li>
             <li class="site-map-lvl1">
-              <h1><a id="map-10" href="">contato</a></h1>
+              <h1><a id="map-10" href="http://minhocco.com.br/homolog/encontre">encontre</a></h1>
               <ul>
-                <li class="site-map-lvl2"><a id="map-11" href="">fale conosco</a>
+                <li class="site-map-lvl2"><a id="map-11" href="http://minhocco.com.br/homolog/contato">contato</a>
                 </li>
-                <li class="site-map-lvl2"><a id="map-12" href="">trabalhe conosco</a>
+                <li class="site-map-lvl2"><a id="map-12" href="http://minhocco.com.br/homolog/onde-achar">onde achar</a>
                 </li>
-                <li class="site-map-lvl2"><a id="map-13" href="">lojas</a>
+                <li class="site-map-lvl2"><a id="map-13" href="http://minhocco.com.br/homolog/clipping">clipping</a>
                 </li>
                 <li class="site-map-lvl2"><a id="map-14" href="">franquias</a>
                 </li>
@@ -78,9 +78,9 @@
       </div>
     </div>
   </footer>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
-
+  <script src="<?php echo get_template_directory_uri(); ?>/scripts/lightbox.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/scripts/main.js"></script>
   <!--<script>
     (function(i, s, o, g, r, a, m) {

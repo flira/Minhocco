@@ -13,19 +13,19 @@ window.$e = function (el) {
 (function(ng) {
   'use strict';
   var el, radios, panes, self,
-
+  
   $a = function(p,el,n) {
     // A quick way to rewrap elements into jqlite.
     return ng.element(p.find(el)[n]);
   },
-
+  
   animateRadiosFn = function () {
     radios.find('label').removeClass('selected');
     ng.element(panes).removeClass('selected');
     $a(radios,'label',self.radioValue).addClass('selected');
     ng.element(panes[self.radioValue]).addClass('selected');
   },
-
+  
   repeatItensFn = function () {
     var first = ng.element(panes[0]).clone(),
         last = ng.element(panes[panes.length - 1]).clone();
@@ -101,12 +101,12 @@ window.$e = function (el) {
         transclude: true,
         scope: {},
         controller: function ($scope, $element) {
-          /*
+          /* 
            * 1 - Make an alias for the "transclude" div,
            * 2 - Make an alias for the radios nav,
            * 3 - Removes dummy "li" from the "panes"
            */
-
+          
           el = $element.children()[0], //1
           radios = $a($element,'nav',1), //2
           panes = $scope.panes =  el.getElementsByTagName('li'),
@@ -120,7 +120,7 @@ window.$e = function (el) {
             self.trueLength = panes.length;
             self.timerValue = 10000;
             self.radioValue = '0'; //2
-
+            
             self.animateRadios = animateRadiosFn,
             self.repeatItens = repeatItensFn,
             self.setClasses = setClassesFn,
@@ -190,6 +190,7 @@ $q('.grid-onde .local').bind('click', function(e){
   });
   pos( );
 }());
+
 (function(a){
     'use strict';
     a.element(document.getElementsByTagName('html')).removeClass('no-js');
