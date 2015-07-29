@@ -829,18 +829,28 @@ ________________________________________________________________________________
 
 .icon-minhocco {
   background-position: -22px -140px; }
+  .icon-minhocco:hover {
+    background-position: -22px -284px; }
 
 .icon-facebook {
   background-position: -60px -140px; }
+  .icon-facebook:hover {
+    background-position: -60px -284px; }
 
 .icon-pokeball {
   background-position: -99px -139px; }
+  .icon-pokeball:hover {
+    background-position: -99px -283px; }
 
 .icon-pinterest {
   background-position: -60px -179px; }
+  .icon-pinterest:hover {
+    background-position: -60px -323px; }
 
 .icon-youtube {
   background-position: -99px -179px; }
+  .icon-youtube:hover {
+    background-position: -99px -323px; }
 
 .fechar {
   background-position: 0 -177px;

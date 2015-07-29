@@ -50,19 +50,34 @@
   background-position: 4px -137px;
 }
 .icon-minhocco {
-  background-position: -22px -140px
+  background-position: -22px -140px;
+  &:hover {
+    background-position: -22px (-140-144)+px;
+  }
 }
 .icon-facebook {
   background-position: -60px -140px;
+  &:hover {
+    background-position: -60px (-140-144)+px;
+  }
 }
 .icon-pokeball {
   background-position: -99px -139px;
+  &:hover {
+    background-position: -99px (-139-144)+px;
+  }
 }
 .icon-pinterest {
   background-position: -60px -179px;
+  &:hover {
+    background-position: -60px (-179-144)+px;
+  }
 }
 .icon-youtube {
   background-position: -99px -179px;
+  &:hover {
+    background-position: -99px (-179-144)+px;
+  }
 }
 
 .fechar {
