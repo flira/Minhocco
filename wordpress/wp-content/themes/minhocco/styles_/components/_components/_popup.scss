@@ -1,0 +1,46 @@
+.popup {
+  @extend %absolute;
+  @extend %text-center;
+  background: rgba(140, 199, 85, 0.8);
+  color: #fff;
+  top: 0;
+  right: 0;
+  bottom: 51%;
+  left: 31%;
+  overflow: hidden;
+  max-width: 0;
+  max-height: 0;
+  margin: auto;
+  transition: all ease-in-out .5s;
+}
+.popup-ctrl {
+  @extend %no-display;
+  &:checked ~ .popup {
+    max-width: 33%;
+    max-height: 60%;
+    padding: 20px 40px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  &:checked ~ .popup-sprt {
+    background-color: transparent;
+    background-position: 0 -177px;
+    border-radius: 0;
+    width: 24px;
+    height: 25px;
+  }
+}
+.popup-sprt {
+  @extend %absolute;
+  @extend %sprites;
+  transition: all ease-in-out .5s;
+  background-color: rgba(140, 199, 85, 0.8);
+  background-position: 0 -155px;
+  border-radius: 15px;
+  width: 20px;
+  height: 20px;
+  top: 22%;
+  right: 34%;
+}

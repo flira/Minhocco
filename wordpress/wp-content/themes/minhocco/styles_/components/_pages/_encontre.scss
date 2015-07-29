@@ -1,0 +1,179 @@
+%encontre-fingerpaint {
+  font-family: 'fingerpaint', sans-serif;
+}
+%sprite-contato {
+  background-image: url("img/sprites-contato.png");
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.pg-encontre {
+  .body-main {
+    color: white;
+    h1 {
+      @extend %encontre-fingerpaint;
+      font-size: toEm(16);
+      padding: 0 0 1em;
+    }
+    h2 {
+      font-weight: 700;
+      padding-bottom: 1em;
+    }
+  }
+}
+%panels-padding {
+  padding: 31px 63px;
+}
+.address, .form-encap {
+  h1, h2 {
+    font-size: toEm(20);
+    text-transform: lowercase;
+  }
+}
+.address {
+  address {
+    padding-bottom: 2em;
+  }
+  .panel-left, .panel-right {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: 50%;
+    height: 334px;
+  }
+  .panel-left {
+    @extend %panels-padding;
+    position: relative;
+    background: $colorEncontre;
+  }
+  .address-map {
+    width: 100%;
+    height: 334px;
+  }
+  .arara {
+    @extend %sprite-contato;
+    background-position: bottom right;
+    right: 0;
+    bottom: 0;
+    width: 218px;
+    height: 189px;
+  }
+}
+.form-encap {
+  @extend %panels-padding;
+  background: url(img/rapport-contato.png) $colorGR;
+  position: relative;
+  text-align: left;
+  label {
+    font-size: toEm(16);
+    width: 100%;
+  }
+  input,
+  select,
+  textarea, {
+    -webkit-appearance: none;
+    background: $colorEncontre;
+    border: none;
+    border-radius: 0;
+    padding: .5em 1em;
+    resize: none;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+  option,
+  .contato-enviar {
+    background: #1f9999;
+  }
+  .contato-form {
+    position: relative;
+    width: 420px;
+  }
+  .contato-enviar {
+    @extend %encontre-fingerpaint;
+    font-size: toEm(20);
+    position: absolute;
+    right: -8em;
+    bottom: .4em;
+    padding: 21px 12px;
+    width: initial;
+  }
+  .onca {
+    @extend %sprite-contato;
+    right: 40px;
+    bottom: 0;
+    width: 406px;
+    height: 310px;
+  }
+  .mensagem {
+    @extend %encontre-fingerpaint;
+    font-size: 16px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    text-align: center;
+    width: 200px;
+    height: 64px;
+    a {
+      color: #fff;
+    }
+  }
+}
+.grid-onde {
+  padding: 0 1em;
+  .col {
+    height: 120px;
+  }
+  .local {
+    background: $colorEncontre;
+    h1 {
+      cursor: pointer;
+      padding: 50px;
+      padding: calc(60px - .65em);
+      text-align: center;
+    }
+    &.selected {
+      &, &:hover {
+        background: $colorGR;
+      }
+      .grid-onde-content {
+        background-color: rgba(121, 43, 130, .9);
+        display: block;
+        padding: 33px;
+        position: absolute;
+        top: 239px;
+        left: 0;
+        width: 100%;
+        height: 261px;
+        height: calc(240px + 1.5em);
+      }
+    }
+    &:hover {
+      background: lighten($colorGR, 20%);
+    }
+    address {
+      font-size: (12/14)+em;
+    }
+    .fechar {
+      top: 1em;
+      right: 1em;
+    }
+  }
+  .block-line {
+      &:nth-child(2) .grid-onde-content {
+        top: 369px;
+      }
+      &:nth-child(3) .grid-onde-content {
+        top: 118px;
+      }
+      &:nth-child(4) .grid-onde-content {
+        top: 247px;
+      }
+    }
+  .placeholder {
+    background: lighten($colorEncontre, 20%);
+  }
+  &-content {
+    display: none;
+  }
+}

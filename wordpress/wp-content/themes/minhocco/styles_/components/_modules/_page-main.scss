@@ -1,0 +1,37 @@
+.body-main {
+  background-color: $mainBgColor;
+  margin-top: toEm(68);
+}
+@include medium {
+    .body-main {
+        margin-top: toEm(100);
+    }
+}
+@include small {
+    .body-main {
+        margin-top: toEm(45);
+    }
+}
+body[class*=pg] .body-main {
+  padding-top: 15px;
+}
+
+body[class*=pg].pg-sub .body-main {
+  padding-top: 51px;
+  padding-top: calc(#{15px} + #{toEm(36)});
+}
+
+@each $pg-name, $pg-color in
+  (pg-universo, $colorUniverso),
+  (pg-guardaroupa, $colorGR),
+  (pg-parque, $colorParque),
+  (pg-encontre, $colorEncontre) {
+  .#{$pg-name} {
+    @include pg-borders($pg-color);
+    .sub-menu-a {
+      &.selected, &:hover {
+        color: $pg-color;
+      }
+    }
+  }
+}

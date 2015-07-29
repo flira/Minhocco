@@ -1,0 +1,107 @@
+.body-footer {
+  background-color: $light-gray;
+  font-size: toEm(12);
+  padding: toEm(37) 0 toEm(33);
+  h1 {
+    @extend %bold;
+    padding-bottom: .25em;
+  }
+  .encap {
+    @extend %text-right;
+    div, form {
+      @extend %text-left;
+    }
+  }
+  .icon-minhocco {
+    @extend %absolute;
+    @extend %hidden-text;
+    top: 0;
+    left: $externalMargin;
+    width: 28px;
+    height: 27px;
+  }
+}
+.newsletter {
+  @extend %inline-block;
+  margin-bottom: 2em;
+  width: 12em;
+  .newsletter-email {
+    @extend %no-outline;
+    width: 100%;
+  }
+  .newsletter-submit {
+    @extend %bold;
+    @extend %float-right;
+    color: $colorHeaderMenuSelected;
+    background: $colorText;
+    display: block;
+    margin-top: 8px;
+  }
+}
+.site-map {
+  @extend %inline-block;
+  margin-left: 40px;
+  a {
+    color: $colorText;
+  }
+}
+.site-map-lvl1 {
+  margin-left: toEm(21,12);
+  padding-bottom: 1em;
+  &:first-child,
+  &:nth-child(2) {
+    margin-left: 0;
+  }
+}
+.site-map-lvl2 {
+  display: block;
+  font-size: toEm(10,12);
+}
+.social-medias {
+  @extend %inline-block;
+  margin-left:30px;
+  li {
+    margin-left: 18px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  [class|=icon] {
+    @extend %hidden-text;
+    width: 30px;
+    height: 30px;
+  }
+}
+@include medium {
+  .body-footer .encap .social-medias {
+    margin-left: auto;
+    width: 100%;
+    margin: 2em auto 0;
+    text-align: center;
+  }
+  .newsletter {
+    margin-left: 40px;
+  }
+}
+@include small {
+  .body-footer .encap .site-map {
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .site-map-lvl1 {
+    text-align: left;
+  }
+}
+@include smallest {
+  .site-map-lvl1 {
+    width: 45%;
+    margin: 0;
+    &:first-child {
+      width: 0;
+    }
+  }
+  .body-footer .encap .site-map {
+    text-align: left;
+  }
+}

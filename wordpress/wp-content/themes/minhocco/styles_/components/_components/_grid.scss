@@ -1,0 +1,103 @@
+/*
+  [1.1.1]Positions
+*/
+
+%fixed {
+  position: fixed;
+}
+
+%absolute {
+  position: absolute;
+}
+
+%relative {
+  position: relative;
+}
+
+/*
+  [1.1.2]Floats
+*/
+
+%float-right {
+  float: right;
+}
+
+%float-left {
+  float: left;
+}
+
+/*
+  [1.1.2]Borders and outlines
+*/
+
+%no-outline {
+  outline: none;
+}
+
+.encap {
+  @extend %text-left;
+  @extend %relative;
+  max-width: $gridWidth;
+  padding: 0 $externalMargin;
+  margin: auto;
+}
+
+%hidden-text {
+  display: block;
+  direction: ltr;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+/*
+  [1.1.3]Displays
+*/
+
+%inline-block {
+  @include mib;
+}
+
+%no-display {
+  display: none;
+}
+
+/*
+  [1.1.4]columns classes
+*/
+
+.block-line {
+  @extend %text-justify;
+  margin: 0 0 .7em;
+  .col {
+    @extend %inline-block;
+    margin: 0;
+    margin-left: 1em;
+  }
+  &.colx1 .col,
+  .col img {
+    width: 100%;
+  }
+  & .col:first-child,
+  &.col-1 .col {
+    margin-left: 0;
+  }
+  @for $i from 2 through 6 {
+    &.colx#{$i} > .col{
+      $_n: 100% / $i;
+      $_m: (($i - 1) / $i)+em;
+      width: $_n - ($i * .25); //IE fallback
+      width: calc(#{$_n} - #{$_m});
+    }
+  }
+}
+
+@include small {
+  .block-line.colx3 > .col {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@include smallest {
+  
+}

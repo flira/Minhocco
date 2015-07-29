@@ -1,0 +1,82 @@
+// Utils
+
+//==========  VARIABLES  ==========
+$colorText: #6d6e71;
+$colorHeaderMenu: #000;
+$colorHeaderMenuSelected: #fff;
+$colorLogo: #ec008c;
+$mainBgColor: #fff;
+$light-gray: #dcddde;
+
+// Page colors
+$colorUniverso: #80c242;
+$colorGR: #792b84;
+$colorParque: #ef5a28;
+$colorEncontre: #24b7b8;
+
+$fontDefault: asap, 'helvetica neue', helvetica, arial, sans-serif;
+$font2: fingerpaint, sans-serif;
+
+$fontSizeBase: 14;
+
+$gridWidth: 880px;
+$small: 660px;
+$smallest: 419px;
+$externalMargin: 20px;
+
+//==========  FUNCTIONS  ==========
+
+@function toEm($n, $m: $fontSizeBase) {
+  @return ($n/$m)+em;
+}
+
+//==========  MIXINS  ==========
+
+// Font import
+@mixin font-face($name, $weight, $style, $suffix: '') {
+      font-family: $name;
+      src: url('../fonts/' + $name + $suffix + '.eot');
+      src: url('../fonts/' + $name + $suffix + '.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/' + $name + $suffix + '.woff2') format('woff2'),
+      url('../fonts/' + $name + $suffix + '.woff') format('woff'),
+      url('../fonts/' + $name + $suffix + '.ttf') format('truetype'),
+      url('../fonts/' + $name + $suffix + '.svg#asapitalic') format('svg');
+      font-weight: $weight;
+      font-style: $style;
+}
+
+// Media Query
+@mixin media-query($media-query) {
+  @if $media-query == smallest {
+    @media only screen and (max-width: $smallest) { @content; }
+  }
+  @if $media-query == small {
+    @media only screen and (max-width: $small) { @content; }
+  }
+  @if $media-query == medium {
+    @media only screen and (max-width: $gridWidth) { @content; }
+  }
+}
+
+// Just some helpers...
+@mixin smallest { @include media-query(smallest) { @content }; }
+@mixin small { @include media-query(small) { @content }; }
+@mixin medium { @include media-query(medium) { @content }; }
+
+// Inline-block with polyfill
+
+@mixin mib {
+  display: inline-block;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  vertical-align: top;
+}
+
+// Page borders
+@mixin pg-borders($pgColor) {
+  .body-main,
+  .body-header {
+    border-bottom: 13px solid $pgColor;
+  }
+}

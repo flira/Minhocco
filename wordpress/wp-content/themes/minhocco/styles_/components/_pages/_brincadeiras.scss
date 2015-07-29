@@ -1,0 +1,27 @@
+.pg-parque {
+  .homescreen {
+    .block-line {
+      background: url(img/Rapport_Brincadeiras.png) $colorEncontre;
+    }
+    .col:first-child {
+      text-align: right;
+    }
+    .col a {
+      @extend %hidden-text;
+      background-size: contain;
+      margin: 45px .5em;
+    }
+    .imprimir {
+      @extend %float-right;
+      background-image: url(https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Para-imprimir.png);
+      width: 259px;
+      height: 258px;
+      text-align: left;
+    }
+    .pintar {
+      background-image: url(https://minhocco-flira.c9.io/wordpress/wp-content/uploads/2015/07/Para-pintar.png);
+      width: 286px;
+      height: 283px;
+    }
+  }
+}

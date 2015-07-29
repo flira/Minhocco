@@ -1,0 +1,231 @@
+/* Preload images */
+body:after {
+  content: url(../images/loading.gif);
+  display: none;
+}
+
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none;
+}
+
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+}
+
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: none;
+}
+
+.lightbox a img {
+  border: none;
+}
+
+.lb-outerContainer {
+  position: relative;
+  border: solid 16px white;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-container {
+  padding: 0;
+}
+
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(img/loading.gif) no-repeat;
+}
+
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.lb-container > .nav {
+  left: 0;
+}
+
+.lb-nav a {
+  outline: none;
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+}
+
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(../images/prev.png) 10% 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(../images/next.png) 95% 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-dataContainer {
+  margin: 0 auto;
+  padding: 16px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  *zoom: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-data {
+  padding: 0 4px;
+  color: #ccc;
+}
+
+.lb-data .lb-details {
+  background-color: $light-gray;
+  padding: 5px 0 3px;
+  margin: 0 12px;
+  width: calc(#{100%} - #{24px});
+  float: left;
+  text-align: center;
+  line-height: 1.1em;
+}
+
+.lb-data .lb-caption {
+  color: #6d6e70;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1em;
+}
+
+.lb-data .lb-number {
+  @extend %hidden-text;
+  @extend %sprites;
+  display: block !important;
+  position: absolute;
+  bottom: -15px;
+  right: -12px;
+  width: 64px;
+  height: 64px;
+  background-position: -51px -365px;
+}
+
+//Botão de fechar, caso tenha algum dia.
+.lb-data .lb-close {
+  display: none;
+  float: right;
+  width: 30px;
+  height: 30px;
+  //background: url(../images/close.png) top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.pg-encontre {
+  .lb-outerContainer {
+    border-color: $colorEncontre;
+  }
+  .lb-nav a.lb-prev {
+    background-image: url(img/esquerda-encontre.png);
+  }
+  .lb-nav a.lb-next {
+    background-image: url(img/direita-encontre.png);
+  }
+}
+
+.pg-parque {
+  .lb-outerContainer {
+    border-color: $colorParque;
+  }
+  .lb-nav a.lb-prev {
+    background-image: url(img/esquerda-brinc.png);
+  }
+  .lb-nav a.lb-next {
+    background-image: url(img/direita-brinc.png);
+  }
+}

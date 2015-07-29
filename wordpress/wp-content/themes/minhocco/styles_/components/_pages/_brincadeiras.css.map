@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEI,uCAAiB;EACf,UAAU,EAAE,KAAK;AAEnB,0BAAI;EACF,KAAK,EAAE,GAAG",
+"sources": ["_brincadeiras.scss"],
+"names": [],
+"file": "_brincadeiras.css"
+}
